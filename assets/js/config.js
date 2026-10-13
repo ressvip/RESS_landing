@@ -13,14 +13,13 @@ const SITE_CONFIG = {
         description: "RESS is your all-in-one platform for secure ride hailing, on-demand logistics, food delivery, emergency security, and connecting you to trusted everyday services.",
         companyLegalName: "VIP SafeGuard Drive Ltd.",
         registrationNote: "Registered with the Corporate Affairs Commission, Nigeria.",
-        websiteUrl: "https://www.ress.com/",
+        websiteUrl: "https://www.ressvip.com/",
         logoUrl: "assets/images/Logo.svg",
         footerLogoUrl: "assets/images/Footer-20logo.svg"
     },
 
     // SEO, Open Graph & Social Graph Defaults
     seo: {
-        baseUrl: "https://www.ress.com",
         defaultImage: "assets/images/03.png",
         imageWidth: "1200",
         imageHeight: "630",
@@ -37,12 +36,9 @@ const SITE_CONFIG = {
         phoneRaw: "+2347077160028", // Used for direct tel: links
         whatsapp: "+2347077160028",
         emails: {
-            support: "support@ress.com",
-            general: "hello@ress.com",
-            safety: "safety@ress.com",
-            business: "business@ress.com",
-            careers: "careers@ress.com",
-            privacy: "privacy@ress.com"
+            general: "info@ressvip.com",
+            support: "support@ressvip.com",
+            careers: "careers@ressvip.com",
         },
         address: "Lagos, Nigeria"
     },
@@ -52,47 +48,46 @@ const SITE_CONFIG = {
         // Main RESS Client App (Rider / Food / SOS / Services)
         client: {
             name: "RESS Client App",
-            appStore: "https://apps.apple.com/app/ress/idYOUR_APPLE_STORE_ID",
+            appStore: "https://apps.apple.com/ng/app/ress-vip/id6770544009",
             playStore: "https://play.google.com/store/apps/details?id=com.ress.app",
-            apkDirectDownload: "https://www.ress.com/downloads/ress-latest.apk"
+            apkDirectDownload: "#"
         },
         // RESS Driver App
         driver: {
             name: "RESS Driver App",
-            appStore: "https://apps.apple.com/app/ress-driver/idYOUR_DRIVER_APPLE_STORE_ID",
-            playStore: "https://play.google.com/store/apps/details?id=com.ress.driver",
-            apkDirectDownload: "https://www.ress.com/downloads/ress-driver-latest.apk"
+            appStore: "https://apps.apple.com/ng/app/ress-vip-driver/id6770547732",
+            playStore: "https://play.google.com/store/apps/details?id=com.ress.driver_app",
+            apkDirectDownload: "#"
         },
         // RESS Service Partner / Artisan App
         services: {
             name: "RESS Partner App",
-            appStore: "https://apps.apple.com/app/ress-partner/idYOUR_PARTNER_APPLE_STORE_ID",
-            playStore: "https://play.google.com/store/apps/details?id=com.ress.partner",
-            apkDirectDownload: "https://www.ress.com/downloads/ress-partner-latest.apk"
+            appStore: "#",
+            playStore: "#",
+            apkDirectDownload: "#"
         },
         // RESS Security Responder App
         security: {
             name: "RESS Security Responder App",
-            appStore: "https://apps.apple.com/app/ress-responder/idYOUR_SECURITY_APPLE_STORE_ID",
+            appStore: "https://apps.apple.com/ng/app/ress-vip/id6770544009",
             playStore: "https://play.google.com/store/apps/details?id=com.ress.responder",
-            apkDirectDownload: "https://www.ress.com/downloads/ress-security-latest.apk"
+            apkDirectDownload: "#"
         },
         // RESS Food Merchant / Restaurant App
         merchant: {
             name: "RESS Merchant App",
-            appStore: "https://apps.apple.com/app/ress-merchant/idYOUR_MERCHANT_APPLE_STORE_ID",
-            playStore: "https://play.google.com/store/apps/details?id=com.ress.merchant",
-            apkDirectDownload: "https://www.ress.com/downloads/ress-merchant-latest.apk"
+            appStore: "https://apps.apple.com/ng/app/ress-vip-restaurant/id6770562444",
+            playStore: "https://play.google.com/store/apps/details?id=com.ress.restaurant.app",
+            apkDirectDownload: "#"
         }
     },
 
     // Social Media Links
     socials: {
-        facebook: "https://facebook.com/ressapp",
-        instagram: "https://instagram.com/ressapp",
-        youtube: "https://youtube.com/@ressapp",
-        twitter: "https://twitter.com/ressapp",
-        linkedin: "https://linkedin.com/company/ressapp"
+        facebook: "https://www.facebook.com/ressvip",
+        instagram: "https://www.instagram.com/ressvip",
+        youtube: "https://www.youtube.com/@ressvip",
+        twitter: "https://x.com/ressvip",
     },
 
     // Key Page Navigation Links

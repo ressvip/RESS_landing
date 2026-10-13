@@ -193,7 +193,7 @@ function build() {
         }
 
         const filename = path.basename(pageFilePath);
-        const baseUrl = (process.env.SITE_URL || getConfigValue(SITE_CONFIG, 'seo.baseUrl') || 'https://www.ress.com').replace(/\/$/, '');
+        const baseUrl = (process.env.SITE_URL || getConfigValue(SITE_CONFIG, 'brand.websiteUrl') || 'https://www.ressvip.com').replace(/\/$/, '');
         const pagePath = filename === 'index.html' ? '' : filename;
         const pageUrl = pageMeta.canonicalUrl || (pagePath ? `${baseUrl}/${pagePath}` : `${baseUrl}/`);
         const canonicalUrl = pageUrl;
