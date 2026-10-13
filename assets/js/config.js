@@ -18,6 +18,19 @@ const SITE_CONFIG = {
         footerLogoUrl: "assets/images/Footer-20logo.svg"
     },
 
+    // SEO, Open Graph & Social Graph Defaults
+    seo: {
+        baseUrl: "https://www.ress.com",
+        defaultImage: "assets/images/03.png",
+        imageWidth: "1200",
+        imageHeight: "630",
+        imageType: "image/png",
+        keywords: "RESS, Ride Hailing, Logistics, Food Delivery, Services, Artisan Booking, Africa Transport, Secure Rides",
+        fbAppId: "YOUR_FB_APP_ID_HERE",
+        appleAppId: "YOUR_APPLE_STORE_ID",
+        androidPackage: "com.ress.app"
+    },
+
     // Contact Information
     contact: {
         phone: "+234 707 716 0028",
