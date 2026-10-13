@@ -192,15 +192,28 @@ function build() {
             html = html.replace(ifCtaRegex, '');
         }
 
+        const filename = path.basename(pageFilePath);
+        const baseUrl = (process.env.SITE_URL || getConfigValue(SITE_CONFIG, 'brand.websiteUrl') || 'https://www.ressvip.com').replace(/\/$/, '');
+        const pagePath = filename === 'index.html' ? '' : filename;
+        const pageUrl = pageMeta.canonicalUrl || (pagePath ? `${baseUrl}/${pagePath}` : `${baseUrl}/`);
+        const canonicalUrl = pageUrl;
+        const defaultOgImage = getConfigValue(SITE_CONFIG, 'seo.defaultImage') || 'assets/images/03.png';
+        const ogImage = pageMeta.ogImage || (defaultOgImage.startsWith('http') ? defaultOgImage : `${baseUrl}/${defaultOgImage}`);
+
         // Replace placeholders
         html = html.replace(/\{\{title\}\}/g, pageMeta.title || '')
                    .replace(/\{\{description\}\}/g, pageMeta.description || '')
                    .replace(/\{\{content\}\}/g, pageBody)
                    .replace(/\{\{scripts\}\}/g, pageMeta.scripts || '')
-                   .replace(/\{\{headExtra\}\}/g, pageMeta.headExtra || '');
+                   .replace(/\{\{headExtra\}\}/g, pageMeta.headExtra || '')
+                   .replace(/\{\{pageUrl\}\}/g, pageUrl)
+                   .replace(/\{\{canonicalUrl\}\}/g, canonicalUrl)
+                   .replace(/\{\{ogImage\}\}/g, ogImage);
+
+        // Final config interpolation pass for any remaining tokens
+        html = interpolateConfig(html);
 
         // Output destination (dist/ directory)
-        const filename = path.basename(pageFilePath);
         const outputPath = path.join(DIST_DIR, filename);
 
         fs.writeFileSync(outputPath, html, 'utf8');
