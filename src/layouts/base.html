@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+{{> head}}
+<body>
+    {{> navbar}}
+
+    <main>
+        {{content}}
+        {{#if showCta}}
+        {{> global-cta}}
+        {{/if}}
+    </main>
+
+    {{> footer}}
+    {{> cookie-banner}}
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/main.js"></script>
+    {{scripts}}
+</body>
+</html>
