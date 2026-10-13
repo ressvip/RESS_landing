@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fares and Fare Estimator - RESS</title>
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="{{title}}">
+    <meta name="description" content="Know what you will pay before you ride. Get a fare estimate and learn how RESS prices every trip.">
+    <meta name="keywords" content="RESS, Ride Hailing, Logistics, Food Delivery, Services, Artisan Booking, Africa Transport, Secure Rides">
+    <meta name="author" content="RESS">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.ress.com/">
+    <meta property="og:site_name" content="RESS">
+    <meta property="og:title" content="{{title}}">
+    <meta property="og:description" content="{{description}}">
+    <meta property="og:image" content="https://www.ress.com/assets/images/03.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
+    <meta property="fb:app_id" content="YOUR_FB_APP_ID_HERE">
+    
+    <!-- App Links for Messenger / Social sharing -->
+    <meta property="al:ios:app_name" content="RESS">
+    <meta property="al:ios:app_store_id" content="YOUR_APPLE_STORE_ID">
+    <meta property="al:android:app_name" content="RESS">
+    <meta property="al:android:package" content="com.ress.app">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.ress.com/">
+    <meta name="twitter:title" content="{{title}}">
+    <meta name="twitter:description" content="{{description}}">
+    <meta name="twitter:image" content="https://www.ress.com/assets/images/03.png">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/Logo.svg" alt="RESS Logo" width="100" height="40">
+            </a>
+            
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                <span class="hamburger"></span>
+            </button>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="ride-options.html">Ride</a>
+                <a href="eat.html">Eat</a>
+                <a href="ress-security.html">Security</a>
+                <a href="ress-services.html">Services</a>
+                <div class="dropdown">
+                    <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></button>
+                    <div class="dropdown-menu mega-menu">
+                        <div class="mega-menu-grid">
+                            <a href="how-it-works.html" class="dropdown-item">
+                                <div class="dropdown-icon"><img src="assets/images/Path-20Icon.svg" alt="Icon"></div>
+                                <div class="dropdown-text">
+                                    <span class="dropdown-title">How It Works</span>
+                                    <span class="dropdown-desc">The basics of riding with us</span>
+                                </div>
+                            </a>
+                            <a href="ride-options.html" class="dropdown-item">
+                                <div class="dropdown-icon"><img src="assets/images/Group-2042.svg" alt="Icon"></div>
+                                <div class="dropdown-text">
+                                    <span class="dropdown-title">Ride Options</span>
+                                    <span class="dropdown-desc">Explore our vehicle fleet</span>
+                                </div>
+                            </a>
+                            <a href="pricing.html" class="dropdown-item">
+                                <div class="dropdown-icon"><img src="assets/images/chart-area-line.svg" alt="Icon"></div>
+                                <div class="dropdown-text">
+                                    <span class="dropdown-title">Pricing</span>
+                                    <span class="dropdown-desc">Upfront fares, no surprises</span>
+                                </div>
+                            </a>
+                            <a href="safety.html" class="dropdown-item">
+                                <div class="dropdown-icon"><img src="assets/images/Shild-20Icon.svg" alt="Icon"></div>
+                                <div class="dropdown-text">
+                                    <span class="dropdown-title">Safety Standard</span>
+                                    <span class="dropdown-desc">Our commitment to protection</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="mega-menu-footer">
+                            <a href="get-app.html" class="text-teal" style="font-weight: 600; font-size: 0.9rem;">Download the app to get started &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="business.html">Business</a>
+                <a href="get-app.html" class="btn btn-primary nav-cta">Get the App</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        
+        <section style="padding: 160px 0 80px; background: var(--bg-color);">
+            <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4rem;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h1 style="font-size: 4rem; line-height: 1.1; margin-bottom: 1.5rem; font-weight: 700;">Know what you'll pay <br>before you go.</h1>
+                    <p style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 2.5rem; line-height: 1.6; max-width: 500px;">Clear fares, no guesswork. Get an upfront estimate instantly and learn exactly how RESS prices every single trip.</p>
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <img src="assets/images/03.png" alt="Transparent Pricing" style="width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Estimator and Info Grid -->
+        <section class="container" style="padding: 6rem 0;">
+            <div style="display: grid; gap: 4rem; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); align-items: start;">
+                
+                <!-- Left: How pricing works -->
+                <div>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Transparent pricing</h2>
+                    
+                    <div style="display: flex; gap: 1.5rem; margin-bottom: 2rem;">
+                        <div style="flex-shrink: 0; width: 48px; height: 48px; background: rgba(34, 189, 179, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand-teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        </div>
+                        <div>
+                            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">How fares are calculated</h3>
+                            <p style="color: var(--text-secondary); line-height: 1.6;">Your fare reflects the distance of your trip, expected travel time, your selected ride type, and current road conditions. You'll always see the estimate before you confirm.</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1.5rem; margin-bottom: 2rem;">
+                        <div style="flex-shrink: 0; width: 48px; height: 48px; background: rgba(34, 189, 179, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand-teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 6l-9.5 9.5-5-5L1 18"></path><polyline points="16 6 23 6 23 13"></polyline></svg>
+                        </div>
+                        <div>
+                            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Dynamic demand pricing</h3>
+                            <p style="color: var(--text-secondary); line-height: 1.6;">When many people need rides at the same time, fares may rise temporarily to bring more drivers onto the road. You'll be notified if demand pricing is active.</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1.5rem; margin-bottom: 2rem;">
+                        <div style="flex-shrink: 0; width: 48px; height: 48px; background: rgba(34, 189, 179, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand-teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+                        </div>
+                        <div>
+                            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Seamless payments</h3>
+                            <p style="color: var(--text-secondary); line-height: 1.6;">Pay your way. Securely link your credit card, debit card, or use mobile money within the app for a cashless experience.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Fare Estimator Card -->
+                <div style="background: white; padding: 2.5rem; border-radius: 12px; border: 1px solid var(--border-color); box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <h2 style="font-size: 2rem; margin-bottom: 0.5rem;">Estimate your fare</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: 2rem;">Plan your trip and know the cost in advance.</p>
+                    
+                    <form style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <div>
+                            <label style="display: block; font-weight: 500; margin-bottom: 0.5rem; color: var(--text-primary);">Pickup location</label>
+                            <input type="text" placeholder="Enter pickup location" style="width: 100%; padding: 1rem; border: 1px solid var(--border-color); border-radius: 8px; font-size: 1rem; outline: none; background: #fff;">
+                        </div>
+                        
+                        <div>
+                            <label style="display: block; font-weight: 500; margin-bottom: 0.5rem; color: var(--text-primary);">Destination</label>
+                            <input type="text" placeholder="Enter destination" style="width: 100%; padding: 1rem; border: 1px solid var(--border-color); border-radius: 8px; font-size: 1rem; outline: none; background: #fff;">
+                        </div>
+                        
+                        <div>
+                            <label style="display: block; font-weight: 500; margin-bottom: 0.5rem; color: var(--text-primary);">Ride type</label>
+                            <select style="width: 100%; padding: 1rem; border: 1px solid var(--border-color); border-radius: 8px; font-size: 1rem; outline: none; background: #fff; cursor: pointer;">
+                                <option>RESS Go (Everyday)</option>
+                                <option>RESS Comfort</option>
+                                <option>RESS XL (6 Seats)</option>
+                                <option>RESS Lux (Premium)</option>
+                            </select>
+                        </div>
+                        
+                        <button type="button" class="btn btn-primary" style="padding: 1rem; font-size: 1.1rem; border-radius: 8px; margin-top: 0.5rem;">Calculate Fare Estimate</button>
+                    </form>
+                    
+                    <div style="margin-top: 1.5rem; text-align: center;">
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">This is an estimate. Your final fare is confirmed in the app before you book.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Banner -->
+        <section style="background: var(--darker-bg); padding: 8rem 0;">
+            <div class="container" style="color: white; text-align: center;">
+                <h2 style="font-size: 3rem; margin-bottom: 1rem; line-height: 1.2;">No hidden fees. <br><span class="text-teal">Just transparent rides.</span></h2>
+                <p style="font-size: 1.2rem; color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto 2.5rem;">Enjoy peace of mind with upfront pricing on every single journey. Open the app to see your precise fare today.</p>
+                <a href="get-app.html" class="btn btn-primary" style="padding: 1rem 2.5rem; border-radius: 30px; font-size: 1.1rem;">Get the App</a>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="container" style="padding: 6rem 0;">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <h2 style="font-size: 2.5rem;">Frequently Asked Questions</h2>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 2rem;">
+                <div style="border-bottom: 1px solid var(--border-color); padding-bottom: 1.5rem;">
+                    <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-primary);">Will the price change after I book?</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6; margin: 0;">Your upfront fare is confirmed before you book. It only changes if you drastically change your destination, add additional stops, or if the trip takes significantly longer than expected due to unforeseen circumstances.</p>
+                </div>
+                <div style="border-bottom: 1px solid var(--border-color); padding-bottom: 1.5rem;">
+                    <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-primary);">How do promo codes work?</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6; margin: 0;">If you have a promo code, enter it in the 'Promotions' section of your app profile before requesting a ride. The discount will be automatically applied to your upfront fare estimate.</p>
+                </div>
+                <div>
+                    <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-primary);">Can I pay with cash?</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6; margin: 0;">Yes, depending on your region, you can select 'Cash' as your payment method before booking. However, we highly recommend linking a card for a seamless, contactless experience.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Ultra Premium Bottom CTA -->
+        <section class="global-cta-section" style="background: linear-gradient(135deg, var(--darker-bg) 0%, #1a3a38 100%); padding: 6rem 0 0 0; margin-top: 4rem; overflow: hidden; position: relative;">
+            <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 4rem; flex-wrap: wrap;">
+                <div class="cta-text" style="flex: 1; padding-bottom: 6rem; color: #fff; min-width: 300px;">
+                    <h2 style="font-size: 3rem; margin-bottom: 1rem; color: #fff; font-weight: 700;">Ready to go?</h2>
+                    <p style="font-size: 1.25rem; color: rgba(255,255,255,0.8); max-width: 500px; margin-bottom: 2.5rem; line-height: 1.6;">Download the RESS app now and experience the safest, most reliable way to move, eat, and get things done in your city.</p>
+                    <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+                        <a href="get-app.html" style="transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                            <img src="assets/images/Apple-20store.svg" alt="Download on the App Store" style="height: 56px;">
+                        </a>
+                        <a href="get-app.html" style="transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                            <img src="assets/images/play-20store.svg" alt="Get it on Google Play" style="height: 56px;">
+                        </a>
+                    </div>
+                </div>
+                <div class="cta-image" style="flex: 1; text-align: center; position: relative; min-width: 300px;">
+                    <div style="position: absolute; top: 20%; right: 20%; width: 300px; height: 300px; background: var(--primary-color); filter: blur(100px); opacity: 0.3; border-radius: 50%; z-index: 1;"></div>
+                    <img src="assets/images/App-Mobile-Screen-Mockup.png" alt="RESS App" style="max-height: 450px; object-fit: contain; margin-bottom: -50px; transform: rotate(8deg); position: relative; z-index: 2;">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="assets/images/Footer-20logo.svg" alt="RESS Logo" class="footer-logo">
+                    <p>RESS is a safety-first app for rides, food delivery, emergency help and trusted services, built to help you move through life with confidence.</p>
+                    <div class="store-buttons small">
+                        <a href="get-app.html"><img src="assets/images/Apple-20store.svg" alt="App Store"></a>
+                        <a href="get-app.html"><img src="assets/images/play-20store.svg" alt="Google Play"></a>
+                    </div>
+                    <div class="social-icons" style="margin-top: 1rem; display: flex; gap: 1rem; align-items: center;">
+                        <a href="https://facebook.com/ressapp" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><img src="assets/images/brand-facebook.svg" alt="Facebook" width="24" height="24"></a>
+                        <a href="https://instagram.com/ressapp" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><img src="assets/images/brand-instagram.svg" alt="Instagram" width="24" height="24"></a>
+                        <a href="https://youtube.com/@ressapp" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><img src="assets/images/brand-youtube.svg" alt="YouTube" width="24" height="24"></a>
+                    </div>
+                    <p class="phone-contact">Phone: <a href="tel:+2347077160028" style="color: inherit; text-decoration: none;">+234 707 716 0028</a></p>
+                </div>
+                
+                <div class="link-col">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="ride-options.html">RESS Ride</a></li>
+                        <li><a href="eat.html">RESS Eat</a></li>
+                        <li><a href="ress-security.html">RESS Security</a></li>
+                        <li><a href="ress-services.html">RESS Services</a></li>
+                    </ul>
+                </div>
+                <div class="link-col">
+                    <h4>Riders</h4>
+                    <ul>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="ride-options.html">Ride Options</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="safety.html">Safety</a></li>
+                        <li><a href="cities.html">Cities</a></li>
+                    </ul>
+                </div>
+                <div class="link-col">
+                    <h4>Drive and Partner</h4>
+                    <ul>
+                        <li><a href="drive.html">Drive with Us</a></li>
+                        <li><a href="business.html">Business</a></li>
+                        <li><a href="get-app.html">Get the App</a></li>
+                    </ul>
+                </div>
+                <div class="link-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="link-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.html?topic=safety">Report a safety concern</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="legal-links">
+                    <a href="legal-terms.html">Terms of Service</a>
+                    <a href="legal-privacy.html">Privacy Policy</a>
+                    <a href="legal-cookies.html">Cookies</a>
+                    <a href="legal-driver-agreement.html">Driver Agreement</a>
+                    <a href="legal-community-guidelines.html">Community Guidelines</a>
+                    <a href="legal-insurance.html">Insurance</a>
+                    <a href="legal-security.html">Security</a>
+                </div>
+                <p class="copyright">
+                    &copy; <span id="current-year"></span> VIP SafeGuard Drive Ltd. All rights reserved. Registered with the Corporate Affairs Commission, Nigeria.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookie-banner">
+        <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;">
+                <h4 style="color: var(--text-primary); margin-bottom: 0.25rem; font-size: 1.1rem; font-weight: 600;">We value your privacy</h4>
+                <p style="margin: 0; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.5;">We use cookies to improve your experience on our site, analyze site traffic, and serve tailored content. By continuing to use RESS, you consent to our use of cookies. <a href="legal-cookies.html" style="color: var(--brand-teal); text-decoration: underline;">Learn more</a>.</p>
+            </div>
+            <div class="cookie-actions" style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                <button class="btn" id="reject-cookies" style="padding: 0.6rem 1.5rem; border-radius: 8px; border: 1px solid var(--border-color); background: transparent; color: var(--text-primary); font-weight: 600;">Decline</button>
+                <button class="btn btn-primary" id="accept-cookies" style="padding: 0.6rem 1.5rem; border-radius: 8px;">Accept All</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

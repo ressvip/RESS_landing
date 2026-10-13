@@ -1,0 +1,23 @@
+{
+  "name": "ress-web",
+  "version": "1.0.0",
+  "description": "RESS VIP - Premium Multi-Service Urban Mobility, Security & Logistics Platform",
+  "main": "assets/js/main.js",
+  "scripts": {
+    "build": "node scripts/generate.js",
+    "assets:download": "node scripts/download_assets.js",
+    "dev": "npx -y serve . -l 3000",
+    "start": "npx -y serve . -l 3000"
+  },
+  "keywords": [
+    "ress",
+    "ride-hailing",
+    "mobility",
+    "security",
+    "delivery",
+    "artisan-services"
+  ],
+  "author": "VIP SafeGuard Drive Ltd.",
+  "license": "UNLICENSED",
+  "private": true
+}
