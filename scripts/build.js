@@ -208,7 +208,8 @@ function build() {
                    .replace(/\{\{headExtra\}\}/g, pageMeta.headExtra || '')
                    .replace(/\{\{pageUrl\}\}/g, pageUrl)
                    .replace(/\{\{canonicalUrl\}\}/g, canonicalUrl)
-                   .replace(/\{\{ogImage\}\}/g, ogImage);
+                   .replace(/\{\{ogImage\}\}/g, ogImage)
+                   .replace(/\{\{pageClass\}\}/g, pageMeta.pageClass || '');
 
         // Final config interpolation pass for any remaining tokens
         html = interpolateConfig(html);
@@ -247,5 +248,8 @@ if (process.argv.includes('--watch')) {
 
     if (fs.existsSync(SRC_DIR)) {
         fs.watch(SRC_DIR, { recursive: true }, triggerRebuild);
+    }
+    if (fs.existsSync(ASSETS_DIR)) {
+        fs.watch(ASSETS_DIR, { recursive: true }, triggerRebuild);
     }
 }

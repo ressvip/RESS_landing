@@ -419,6 +419,16 @@ p { margin-bottom: var(--spacing-md); color: var(--text-secondary); font-size: 1
 .hero-text h1 { color: white; }
 .hero-text p { color: #CCCCCC; font-size: 1.25rem; }
 
+.hero-layered.hero-light {
+    color: var(--text-primary);
+}
+.hero-layered.hero-light h1 {
+    color: #000000;
+}
+.hero-layered.hero-light p {
+    color: var(--text-secondary);
+}
+
 .hero-visual {
     position: relative;
     display: flex;
@@ -840,6 +850,246 @@ p { margin-bottom: var(--spacing-md); color: var(--text-secondary); font-size: 1
 .download-banner h2 { color: white; margin-bottom: 1rem; }
 .download-banner p { color: rgba(255,255,255,0.9); margin-bottom: 2rem; }
 .download-banner .store-buttons { justify-content: center; margin-top: 0; }
+
+/* ==========================================================================
+   Full-Viewport Section Utilities & Layouts
+   ========================================================================== */
+
+.global-cta-section {
+    background: linear-gradient(135deg, var(--darker-bg) 0%, #1a3a38 100%);
+    padding: 6rem 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.section-fullscreen,
+main.page-fullscreen > section,
+.page-fullscreen > section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    position: relative;
+    padding: 5rem 0;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.section-fullscreen.hero-layered,
+main.page-fullscreen .hero-layered,
+.page-fullscreen .hero-layered {
+    padding-top: 120px !important;
+    padding-bottom: 4rem;
+}
+
+.section-fullscreen.global-cta-section,
+main.page-fullscreen .global-cta-section,
+.page-fullscreen .global-cta-section {
+    min-height: 100vh !important;
+    display: flex !important;
+    align-items: center !important;
+    margin-top: 0 !important;
+    padding: 5rem 0 !important;
+}
+
+.global-cta-section .container {
+    width: 100%;
+}
+
+.section-surface {
+    background-color: var(--surface-color);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.section-dark {
+    background-color: var(--darker-bg);
+    color: var(--text-light);
+}
+
+.section-light {
+    background-color: var(--bg-color);
+}
+
+/* ==========================================================================
+   Ride Category Cards & Fleet Options Component
+   ========================================================================== */
+
+.ride-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    width: 100%;
+}
+
+.ride-card {
+    background: var(--surface-color);
+    padding: 3rem 2rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.ride-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-float);
+}
+
+.ride-card.featured {
+    border: 2px solid var(--brand-teal);
+}
+
+.ride-card.dark {
+    background: var(--dark-bg);
+    color: var(--text-light);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.ride-card.dark p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.ride-card.dark .ride-card-footer {
+    border-top-color: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.ride-card-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--brand-teal);
+    color: white;
+    padding: 0.25rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.ride-card-badge.badge-soon {
+    background: #000000;
+    color: var(--brand-teal);
+    border: 1px solid var(--brand-teal);
+}
+
+.ride-card-image {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 130px;
+}
+
+.ride-card-image img {
+    max-height: 120px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.ride-card:hover .ride-card-image img {
+    transform: scale(1.04);
+}
+
+.ride-card-icon {
+    margin-bottom: 2rem;
+}
+
+.ride-card-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.ride-card-subtitle {
+    color: var(--brand-teal);
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+}
+
+.ride-card-desc {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    min-height: 72px;
+}
+
+.ride-card-footer {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.5rem;
+    margin-top: auto;
+}
+
+/* ==========================================================================
+   Feature Bullet Lists & Verification Badges
+   ========================================================================== */
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+}
+
+.feature-list-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+    font-size: 1.05rem;
+}
+
+.feature-list-item svg {
+    flex-shrink: 0;
+}
+
+.safety-feature-list {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.safety-feature-row {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.safety-feature-icon {
+    width: 36px;
+    height: 36px;
+    background: rgba(34, 189, 179, 0.2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.safety-feature-content h4 {
+    color: white;
+    margin-bottom: 0.25rem;
+    font-size: 1.1rem;
+}
+
+.safety-feature-content p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.5;
+}
 
 /* Footer */
 .footer {
