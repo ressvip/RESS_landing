@@ -218,6 +218,23 @@ function build() {
         const outputPath = path.join(DIST_DIR, filename);
 
         fs.writeFileSync(outputPath, html, 'utf8');
+
+        // Also alias refund-policy.html to legal-refund.html for convenience
+        if (filename === 'legal-refund.html') {
+            fs.writeFileSync(path.join(DIST_DIR, 'refund-policy.html'), html, 'utf8');
+        }
+
+        // Also alias privacy-policy.html to legal-privacy.html
+        if (filename === 'legal-privacy.html') {
+            fs.writeFileSync(path.join(DIST_DIR, 'privacy-policy.html'), html, 'utf8');
+        }
+
+        // Also alias terms-of-service.html and terms.html to legal-terms.html
+        if (filename === 'legal-terms.html') {
+            fs.writeFileSync(path.join(DIST_DIR, 'terms-of-service.html'), html, 'utf8');
+            fs.writeFileSync(path.join(DIST_DIR, 'terms.html'), html, 'utf8');
+        }
+
         builtCount++;
         console.log(`  ✓ Built dist/${filename}`);
     }
