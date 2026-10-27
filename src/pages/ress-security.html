@@ -1,58 +1,331 @@
 ---
-title: RESS Security - Help When You Feel Unsafe
-description: Reach local security agencies and alert your emergency contacts from the RESS app.
-showCta: true
+title: RESS Security - Fast Emergency Response and 24/7 Protection
+description: Protect your personal safety, home, and workplace with RESS Security. Instant panic trigger, live telemetry dispatch, accredited patrol responders, and smart CCTV monitoring across Nigeria.
+pageClass: page-fullscreen page-security
+showCta: false
+scripts: |
+    <script>
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('click', () => {
+                const ans = q.nextElementSibling;
+                const span = q.querySelector('span');
+                if (ans.style.display === 'block') {
+                    ans.style.display = 'none';
+                    span.textContent = '+';
+                } else {
+                    ans.style.display = 'block';
+                    span.textContent = '-';
+                }
+            });
+        });
+    </script>
 ---
-<section class="hero-layered" style="min-height: 70vh; padding-top: 120px;">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h1 class="animate-up" style="font-size: 3.5rem;">Help is <br><span class="text-teal">one step away.</span></h1>
-                        <p class="animate-up" style="animation-delay: 0.1s; margin-top: 1rem; color: #CCC;">When you feel unsafe, RESS Security connects you with local security agencies and the people who matter most.</p>
-                        <div class="store-buttons animate-up" style="animation-delay: 0.2s;" style="margin-top: 2rem;">
-                            <a href="get-app.html"><img src="assets/images/Apple-20store.svg" alt="App Store"></a>
-                            <a href="get-app.html"><img src="assets/images/play-20store.svg" alt="Google Play"></a>
-                        </div>
-                    </div>
-                    <div class="hero-visual animate-up" style="animation-delay: 0.3s;">
-                        <img src="assets/images/ress-security-mockup.png" alt="RESS Security App" class="hero-phone-bg" style="max-height: 620px; width: auto; object-fit: contain; filter: drop-shadow(0 25px 50px rgba(0,0,0,0.6));">
-                    </div>
+<!-- 1. Hero Section -->
+<section class="section-fullscreen hero-layered">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text" style="max-width: 620px;">
+                <h1 class="animate-up" style="font-size: 3.25rem; line-height: 1.15; color: #FFFFFF;">
+                    Emergency response and verified personal protection.
+                </h1>
+                <p class="animate-up" style="animation-delay: 0.1s; margin-top: 1.25rem; font-size: 1.15rem; color: #CCCCCC; line-height: 1.6;">
+                    When you feel unsafe, RESS Security dispatches licensed emergency patrol units and alerts your personal circle. Silent hardware volume activation, live satellite tracking, and continuous control room supervision.
+                </p>
+                <div class="animate-up" style="animation-delay: 0.2s; margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+                    <a href="#how-it-works" class="btn btn-primary">How RESS Security works</a>
                 </div>
             </div>
-        </section>
-        
-        <section class="container" style="padding: 2rem 0 4rem;">
-            <div style="background: var(--surface-color); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 3rem; display: flex; align-items: center; gap: 2rem; box-shadow: var(--shadow-sm);">
-                <div style="flex: 0 0 auto; background: rgba(229, 62, 62, 0.1); padding: 1.5rem; border-radius: 50%;">
-                    <img src="assets/images/Group-2012687.svg" alt="SOS Alert" width="40" height="40">
-                </div>
-                <div>
-                    <h2 style="margin-bottom: 0.5rem; font-size: 1.75rem; display: flex; align-items: center; gap: 1rem;">Instant SOS Alert <span style="font-size: 0.75rem; background: #E53E3E; color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Dispatched Immediately</span></h2>
-                    <p style="font-size: 1.1rem; color: var(--text-secondary); margin: 0; max-width: 700px;">If you ever feel unsafe, a single tap sends an immediate alert to local security agencies and your designated emergency contacts, dispatching help to your exact live location instantly.</p>
+            <div class="hero-visual animate-up" style="animation-delay: 0.25s; display: flex; justify-content: center;">
+                <div style="position: relative; width: 100%; display: flex; justify-content: center; align-items: center;">
+                    <div style="position: absolute; top: 25%; left: 30%; width: 220px; height: 220px; background: #CE3375; filter: blur(90px); opacity: 0.25; border-radius: 50%; z-index: 1;"></div>
+                    <img src="assets/images/ress-security-mockup.png" alt="RESS Security Mobile Application" class="hero-phone-bg" style="position: relative; z-index: 2;">
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
-        <section class="container" style="padding: 5rem 0;">
-            <div class="text-center" style="margin-bottom: 3rem;">
-                <h2>How RESS Security works</h2>
-                <p style="color: var(--text-secondary); max-width: 600px; margin: 1rem auto 0;">Your safety is our top priority. We've built robust tools directly into the app to protect you.</p>
+<!-- 2. How RESS Security Works (Core Architecture) -->
+<section id="how-it-works" class="section-fullscreen section-light">
+    <div class="container">
+        <div class="text-center" style="max-width: 760px; margin: 0 auto 3.5rem;">
+            <h2>How RESS Security protects you</h2>
+            <p style="color: var(--text-secondary); margin-top: 0.75rem; font-size: 1.1rem;">
+                A coordinated emergency network connecting your smartphone to licensed security patrol officers.
+            </p>
+        </div>
+
+        <div class="security-2col-grid">
+            <div class="benefit-card" style="text-align: left;">
+                <img src="assets/images/security-settings.svg" alt="Setup safety profile" class="benefit-icon" style="margin-bottom: 1.25rem;">
+                <h4>1. Set up your safety profile</h4>
+                <p>Register verified emergency contacts, residential coordinates, and relevant health notes inside the secure RESS app.</p>
             </div>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <img src="assets/images/Setings-20Icon.svg" alt="App" class="benefit-icon">
-                    <h4>1. Open RESS Security</h4>
-                    <p>Find the dedicated security tab immediately upon opening the app.</p>
+            <div class="benefit-card" style="text-align: left;">
+                <img src="assets/images/Group-2012687.svg" alt="Silent or direct trigger" class="benefit-icon" style="margin-bottom: 1.25rem;">
+                <h4>2. Trigger silent or direct SOS</h4>
+                <p>Hold the hardware volume key for 3 seconds or tap the on-screen emergency button to transmit a panic alert.</p>
+            </div>
+            <div class="benefit-card" style="text-align: left;">
+                <img src="assets/images/security-path.svg" alt="Immediate patrol dispatch" class="benefit-icon" style="margin-bottom: 1.25rem;">
+                <h4>3. Immediate patrol dispatch</h4>
+                <p>Our 24-hour operations center identifies your location and routes the nearest accredited armed response vehicle.</p>
+            </div>
+            <div class="benefit-card" style="text-align: left;">
+                <img src="assets/images/security-shield.svg" alt="Continuous live tracking" class="benefit-icon" style="margin-bottom: 1.25rem;">
+                <h4>4. Continuous live tracking</h4>
+                <p>Emergency contacts receive an encrypted tracking link to monitor patrol progress until your safety is confirmed.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 3. EXTRA SECTION 1: Dual Panic Request Triggers -->
+<section id="panic-activation" class="section-fullscreen section-surface">
+    <div class="container">
+        <div class="text-center" style="max-width: 800px; margin: 0 auto 3.5rem;">
+            <h2>Two ways to trigger an emergency panic request</h2>
+            <p style="color: var(--brand-teal); font-weight: 600; font-size: 1.15rem; margin-top: 0.5rem;">
+                Active protection with zero delays
+            </p>
+            <p style="color: var(--text-secondary); margin-top: 0.75rem; font-size: 1.1rem; line-height: 1.6;">
+                Whether your phone is tucked away in your pocket or open in your hand, activate immediate emergency response in seconds without alerting an intruder.
+            </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem;">
+            <!-- Trigger 1: Hardware Volume Key -->
+            <div class="panic-card">
+                <span class="panic-card-badge">Silent hardware activation</span>
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-primary);">Hold the physical volume key for 3 seconds</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">
+                    Designed for high-stress situations where looking at or unlocking your smartphone could endanger your safety.
+                </p>
+
+                <div class="panic-hardware-graphic">
+                    <div style="width: 48px; height: 48px; border-radius: 50%; background: rgba(206, 51, 117, 0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#CE3375" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <div style="color: #FFFFFF; font-weight: 600; font-size: 0.95rem;">Physical Volume Key Shortcut</div>
+                        <div style="color: #999999; font-size: 0.8rem; margin-top: 0.2rem;">Works while phone is locked or in your pocket</div>
+                    </div>
                 </div>
-                <div class="benefit-card">
-                    <img src="assets/images/Group-2012687.svg" alt="Alert" class="benefit-icon">
-                    <h4>2. Ask for help</h4>
-                    <p>With one tap, reach local security agencies and instantly alert your emergency contacts.</p>
-                </div>
-                <div class="benefit-card">
-                    <img src="assets/images/Shild-20Icon.svg" alt="Connect" class="benefit-icon">
-                    <h4>3. Stay connected</h4>
-                    <p>Keep your trusted people informed with live location sharing until you are safe.</p>
+
+                <div style="display: flex; flex-direction: column; gap: 0.85rem; margin-top: 1.5rem;">
+                    <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                        <span style="color: var(--brand-teal); font-weight: bold;">✓</span>
+                        <span style="font-size: 0.95rem; color: var(--text-secondary);"><strong style="color: var(--text-primary);">Zero screen interaction:</strong> Press and hold either the volume up or volume down button continuously.</span>
+                    </div>
+                    <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                        <span style="color: var(--brand-teal); font-weight: bold;">✓</span>
+                        <span style="font-size: 0.95rem; color: var(--text-secondary);"><strong style="color: var(--text-primary);">Discreet haptic confirmation:</strong> Your device vibrates once quietly to confirm the distress signal was sent.</span>
+                    </div>
+                    <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                        <span style="color: var(--brand-teal); font-weight: bold;">✓</span>
+                        <span style="font-size: 0.95rem; color: var(--text-secondary);"><strong style="color: var(--text-primary);">Covert dark screen:</strong> No sirens, ringtones, or bright popups appear on the screen to reveal you alerted help.</span>
+                    </div>
                 </div>
             </div>
-        </section>
+
+            <!-- Trigger 2: In-App SOS Button -->
+            <div class="panic-card">
+                <span class="panic-card-badge">Direct in-app activation</span>
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-primary);">One-tap on-screen emergency SOS button</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">
+                    Instant visual dashboard for medical emergencies, home perimeter alerts, or active situations where you need real-time data.
+                </p>
+
+                <div class="panic-screen-graphic">
+                    <div style="width: 48px; height: 48px; border-radius: 50%; background: rgba(206, 51, 117, 0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#CE3375">
+                            <circle cx="12" cy="12" r="10" fill="none" stroke="#CE3375" stroke-width="2"/>
+                            <text x="12" y="15" text-anchor="middle" font-size="7" font-weight="900" fill="#CE3375" font-family="sans-serif">SOS</text>
+                        </svg>
+                    </div>
+                    <div>
+                        <div style="color: #FFFFFF; font-weight: 600; font-size: 0.95rem;">On-Screen Panic Console</div>
+                        <div style="color: #999999; font-size: 0.8rem; margin-top: 0.2rem;">Live responder ETA and 2-way dispatch status</div>
+                    </div>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 0.85rem; margin-top: 1.5rem;">
+                    <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                        <span style="color: var(--brand-teal); font-weight: bold;">✓</span>
+                        <span style="font-size: 0.95rem; color: var(--text-secondary);"><strong style="color: var(--text-primary);">Instant one-tap trigger:</strong> Prominently located on the Security home tab with zero navigation menus.</span>
+                    </div>
+                    <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                        <span style="color: var(--brand-teal); font-weight: bold;">✓</span>
+                        <span style="font-size: 0.95rem; color: var(--text-secondary);"><strong style="color: var(--text-primary);">5-second cancel buffer:</strong> Built-in countdown timer allows you to dismiss accidental touches using your security PIN.</span>
+                    </div>
+                    <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                        <span style="color: var(--brand-teal); font-weight: bold;">✓</span>
+                        <span style="font-size: 0.95rem; color: var(--text-secondary);"><strong style="color: var(--text-primary);">Silent live dispatch chat:</strong> Message the control supervisor silently if talking out loud is unsafe.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 4. EXTRA SECTION 2: Incident Protocol & Response Flow -->
+<section id="response-protocol" class="section-fullscreen section-light">
+    <div class="container">
+        <div class="text-center" style="max-width: 780px; margin: 0 auto 3.5rem;">
+            <h2>What happens after you trigger a panic alert</h2>
+            <p style="color: var(--text-secondary); margin-top: 0.75rem; font-size: 1.1rem; line-height: 1.6;">
+                A transparent, step-by-step incident resolution sequence from initial transmission to on-site perimeter protection.
+            </p>
+        </div>
+
+        <div class="protocol-timeline">
+            <div class="protocol-step">
+                <div class="protocol-step-time">0 to 5 seconds</div>
+                <h4 style="margin-bottom: 0.75rem;">Encrypted coordinate broadcast</h4>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.5;">
+                    Your device sends high-precision GPS coordinates, battery level, and user identity directly to the central dispatch console via encrypted telemetry.
+                </p>
+            </div>
+
+            <div class="protocol-step">
+                <div class="protocol-step-time">5 to 15 seconds</div>
+                <h4 style="margin-bottom: 0.75rem;">Emergency contacts notified</h4>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.5;">
+                    Automated SMS messages and app notifications send your live tracking URL to your designated emergency contacts, showing your current position.
+                </p>
+            </div>
+
+            <div class="protocol-step">
+                <div class="protocol-step-time">15 to 45 seconds</div>
+                <h4 style="margin-bottom: 0.75rem;">Patrol vehicle deployed</h4>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.5;">
+                    The 24/7 command center dispatches the nearest accredited mobile response team and coordinates directly with state law enforcement agencies.
+                </p>
+            </div>
+
+            <div class="protocol-step">
+                <div class="protocol-step-time">4 to 7 minutes average</div>
+                <h4 style="margin-bottom: 0.75rem;">On-scene arrival and escort</h4>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.5;">
+                    Uniformed responders arrive at your location, secure the immediate area, confirm your well-being, and remain on site until you are safe.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 5. Property & Business Security Integration -->
+<section class="section-fullscreen section-surface">
+    <div class="container">
+        <div class="text-center" style="max-width: 780px; margin: 0 auto 3.5rem;">
+            <h2>Comprehensive security for residences and commercial sites</h2>
+            <p style="color: var(--text-secondary); margin-top: 0.75rem; font-size: 1.1rem; line-height: 1.6;">
+                From smart surveillance integration to licensed physical guards, manage your property safety in one unified system.
+            </p>
+        </div>
+
+        <div class="benefits-grid" style="margin-top: 0;">
+            <div class="benefit-card">
+                <img src="assets/images/security-shield.svg" alt="Smart property monitoring" class="benefit-icon">
+                <h4>Smart CCTV and sensor monitoring</h4>
+                <p>Integrate existing perimeter security cameras, gate sensors, and smart locks to view live camera feeds inside RESS VIP.</p>
+            </div>
+            <div class="benefit-card">
+                <img src="assets/images/Group-2012687.svg" alt="Trained security personnel" class="benefit-icon">
+                <h4>Trained static security guards</h4>
+                <p>Request vetted, uniformed security personnel for private residential estates, business headquarters, and retail facilities.</p>
+            </div>
+            <div class="benefit-card">
+                <img src="assets/images/security-path.svg" alt="Scheduled patrols" class="benefit-icon">
+                <h4>Scheduled perimeter drive-bys</h4>
+                <p>Book regular nocturnal vehicle patrols through private residential streets and commercial warehouses to deter trespassing.</p>
+            </div>
+            <div class="benefit-card">
+                <img src="assets/images/security-chart.svg" alt="Integrated incident logs" class="benefit-icon">
+                <h4>Itemized incident reporting</h4>
+                <p>Review comprehensive digital incident logs, patrol check-in timestamps, and response records exported directly from the app.</p>
+            </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 3.5rem; padding-top: 2.5rem; border-top: 1px solid var(--border-color); text-align: center;">
+            <div>
+                <div style="font-size: 2rem; font-weight: 800; color: var(--brand-teal);">4 mins</div>
+                <div style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.25rem;">Average patrol dispatch time</div>
+            </div>
+            <div>
+                <div style="font-size: 2rem; font-weight: 800; color: var(--brand-teal);">100%</div>
+                <div style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.25rem;">Vetted, state-licensed officers</div>
+            </div>
+            <div>
+                <div style="font-size: 2rem; font-weight: 800; color: var(--brand-teal);">24/7/365</div>
+                <div style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.25rem;">Continuous command monitoring</div>
+            </div>
+            <div>
+                <div style="font-size: 2rem; font-weight: 800; color: var(--brand-teal);">256-bit</div>
+                <div style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.25rem;">End-to-end encrypted telemetry</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 6. Ready to Activate Protection CTA -->
+<section class="section-fullscreen section-dark" style="background: linear-gradient(135deg, var(--darker-bg) 0%, #2b0e1d 100%);">
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 4rem; flex-wrap: wrap;">
+        <div class="cta-text" style="flex: 1; color: #fff; min-width: 300px;">
+            <h2 style="font-size: 2.75rem; margin-bottom: 1rem; color: #fff; font-weight: 700;">Take control of your personal and property security</h2>
+            <p style="font-size: 1.15rem; color: rgba(255,255,255,0.8); max-width: 520px; margin-bottom: 2.5rem; line-height: 1.6;">
+                Download the RESS app to set up your emergency contacts, configure your silent volume button panic shortcut, and access on-demand protection whenever you need it.
+            </p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <a href="get-app.html" class="btn btn-primary">Download security app</a>
+            </div>
+        </div>
+        <div class="cta-image" style="flex: 1; text-align: center; position: relative; min-width: 300px;">
+            <div style="position: absolute; top: 20%; right: 20%; width: 280px; height: 280px; background: #CE3375; filter: blur(100px); opacity: 0.25; border-radius: 50%; z-index: 1;"></div>
+            <img src="assets/images/App-Mobile-Screen-Mockup.png" alt="RESS Security SOS App" style="width: 100%; max-height: 520px; object-fit: contain; position: relative; z-index: 2;">
+        </div>
+    </div>
+</section>
+
+<!-- 7. Frequently Asked Questions -->
+<section id="faq" class="section-fullscreen section-light faq-section">
+    <div class="container">
+        <div class="text-center" style="max-width: 720px; margin: 0 auto 3.5rem;">
+            <h2>Frequently asked questions</h2>
+            <p style="color: var(--text-secondary); margin-top: 0.75rem; font-size: 1.1rem;">
+                Clear details regarding panic button activation, patrol response, emergency contacts, and false alarms.
+            </p>
+        </div>
+
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">How does the volume button panic trigger function when my phone is locked? <span>+</span></div>
+                <div class="faq-answer">When enabled in app settings, RESS Security registers background accessibility permissions that detect continuous pressure on the physical volume button for 3 seconds. The signal transmits immediately without unlocking your device or illuminating the screen.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What happens if I trigger a panic alert by mistake? <span>+</span></div>
+                <div class="faq-answer">On-screen activations feature a 5-second grace window with an audible vibration. If triggered from hardware buttons, the control room calls your device immediately. You can cancel the response using your private 4-digit security PIN.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Who are the responders dispatched during an emergency? <span>+</span></div>
+                <div class="faq-answer">RESS Security partners exclusively with licensed, accredited private security patrol companies and coordinates directly with state emergency services. Responders are trained, uniformed, and equipped to manage crisis situations.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Do my emergency contacts need to have the RESS app installed? <span>+</span></div>
+                <div class="faq-answer">No. Emergency contacts receive an encrypted SMS containing a web-based tracking link that opens in any browser on any smartphone or computer, showing your real-time location and response status.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can businesses and estate associations sign up for group coverage? <span>+</span></div>
+                <div class="faq-answer">Yes. RESS Security offers corporate and residential estate packages including dedicated patrol vehicles, static guard management, and centralized incident logs.</div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,376 +1,416 @@
 ---
 title: RESS - Safe Rides, Food, Security and Services
 description: RESS is your all-in-one platform for secure ride hailing, on-demand logistics, food delivery, emergency security, and connecting you to trusted everyday services.
+pageClass: page-fullscreen
 showCta: false
+headExtra: |
+    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
 scripts: |
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script>
-        // Simple FAQ toggle logic
-        document.querySelectorAll('.faq-question').forEach(q => {
-            q.addEventListener('click', () => {
-                const ans = q.nextElementSibling;
-                const span = q.querySelector('span');
-                if (ans.style.display === 'block') {
-                    ans.style.display = 'none';
-                    span.textContent = '+';
-                } else {
-                    ans.style.display = 'block';
-                    span.textContent = '-';
-                }
+        document.addEventListener('DOMContentLoaded', () => {
+            // FAQ toggle logic
+            document.querySelectorAll('.faq-question').forEach(q => {
+                q.addEventListener('click', () => {
+                    const ans = q.nextElementSibling;
+                    const span = q.querySelector('span');
+                    if (ans.style.display === 'block') {
+                        ans.style.display = 'none';
+                        span.textContent = '+';
+                    } else {
+                        ans.style.display = 'block';
+                        span.textContent = '-';
+                    }
+                });
             });
+
+            // Screenshots Swiper Carousel Initialization
+            if (typeof Swiper !== 'undefined') {
+                new Swiper('.screenshots-swiper', {
+                    slidesPerView: 1,
+                    spaceBetween: 16,
+                    centeredSlides: true,
+                    loop: true,
+                    initialSlide: 2,
+                    autoplay: {
+                        delay: 3500,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true
+                    },
+                    speed: 600,
+                    slideToClickedSlide: true,
+                    navigation: {
+                        nextEl: '.slider-arrow-next',
+                        prevEl: '.slider-arrow-prev'
+                    },
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 3,
+                            spaceBetween: 20
+                        },
+                        1024: {
+                            slidesPerView: 5,
+                            spaceBetween: 24
+                        }
+                    }
+                });
+            }
         });
     </script>
 ---
 <!-- 1. Hero -->
-        <section class="hero-layered">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h1 class="animate-up">Your safety. Your ride. <span class="text-teal">Your city.</span></h1>
-                        <p class="animate-up" style="animation-delay: 0.1s;">RESS is your all-in-one platform for secure
-                            ride hailing, food delivery, emergency security, and connecting you to trusted everyday
-                            services.</p>
+<section class="section-fullscreen hero-layered">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="animate-up" style="font-size: 3.25rem; line-height: 1.15; color: #FFFFFF;">
+                    Your safety, your ride, your city.
+                </h1>
+                <p class="animate-up" style="animation-delay: 0.1s; margin-top: 1.25rem; font-size: 1.15rem; color: #CCCCCC; line-height: 1.6;">
+                    RESS is your all-in-one platform for secure ride hailing, food delivery, emergency security, and connecting you to trusted everyday services across Nigerian cities.
+                </p>
 
-                        <div class="store-buttons animate-up" style="animation-delay: 0.2s;">
-                            <a href="get-app.html"><img src="assets/images/Apple-20store.svg"
-                                    alt="Download on the App Store"></a>
-                            <a href="get-app.html"><img src="assets/images/play-20store.svg" alt="Get it on Google Play"></a>
-                        </div>
-                        <p class="animate-up"
-                            style="font-size: 0.875rem; margin-top: 1rem; color: #888; animation-delay: 0.3s;">Verified
-                            drivers &middot; Background checks &middot; Real-time ride sharing</p>
-                    </div>
-
-                    <div class="hero-visual animate-up" style="animation-delay: 0.3s;">
-                        <img src="assets/images/App-Mobile-Screen-Mockup.png" alt="RESS VIP App UI" class="hero-phone-bg">
-                    </div>
+                <div class="store-buttons animate-up" style="animation-delay: 0.2s; margin-top: 2rem;">
+                    <a href="get-app.html"><img src="assets/images/Apple-20store.svg" alt="Download on the App Store"></a>
+                    <a href="get-app.html"><img src="assets/images/play-20store.svg" alt="Get it on Google Play"></a>
+                </div>
+                <div class="animate-up" style="margin-top: 1.5rem; display: flex; gap: 1.5rem; flex-wrap: wrap; color: #888888; font-size: 0.875rem;">
+                    <span>Verified drivers</span>
+                    <span>Background checks</span>
+                    <span>Real-time ride sharing</span>
                 </div>
             </div>
-        </section>
 
-        <!-- 2. Product row -->
-        <section class="ecosystem-section">
-            <div class="container">
-                <div class="ecosystem-header text-center" style="margin: 0 auto 3rem;">
-                    <h2>One app. Four ways RESS looks after you.</h2>
-                </div>
-
-                <div class="ecosystem-grid">
-                    <a href="ride-options.html" class="eco-card" data-color="#279d9f">
-                        <div class="eco-card-left">
-                            <div class="eco-icon"><img src="assets/images/Group-2042.svg" alt="Ride"></div>
-                            <h3>RESS Ride</h3>
-                        </div>
-                        <div class="eco-card-right">
-                            <p>Book a ride with safety built into every trip.</p>
-                            <span class="eco-explore text-teal" style="font-weight: 600;">Explore RESS Ride
-                                </span>
-                        </div>
-                    </a>
-
-                    <a href="eat.html" class="eco-card" data-color="#ffa74f">
-                        <div class="eco-card-left">
-                            <div class="eco-icon"><img src="assets/images/Group-2043.svg" alt="Eat"></div>
-                            <h3>RESS Eat</h3>
-                        </div>
-                        <div class="eco-card-right">
-                            <p>Order from registered restaurants and see the cost and delivery time before you pay.</p>
-                            <span class="eco-explore text-teal" style="font-weight: 600;">Explore RESS Eat </span>
-                        </div>
-                    </a>
-
-                    <a href="ress-security.html" class="eco-card" data-color="#ce3375">
-                        <div class="eco-card-left">
-                            <div class="eco-icon"><img src="assets/images/Group-2012687.svg" alt="Security"></div>
-                            <h3>RESS Security</h3>
-                        </div>
-                        <div class="eco-card-right">
-                            <p>Reach help fast when you feel unsafe.</p>
-                            <span class="eco-explore text-teal" style="font-weight: 600;">Explore RESS Security
-                                </span>
-                        </div>
-                    </a>
-
-                    <a href="ress-services.html" class="eco-card" data-color="#1b5091">
-                        <div class="eco-card-left">
-                            <div class="eco-icon"><img src="assets/images/Subtraction-205.svg" alt="Services"></div>
-                            <h3>RESS Services</h3>
-                        </div>
-                        <div class="eco-card-right">
-                            <p>Connect with trusted mechanics, electricians, plumbers and technicians on-demand help for
-                                every need.</p>
-                            <span class="eco-explore text-teal" style="font-weight: 600;">Explore RESS Services
-                                </span>
-                        </div>
-                    </a>
-                </div>
+            <div class="hero-visual animate-up" style="animation-delay: 0.3s;">
+                <img src="assets/images/App-Mobile-Screen-Mockup.png" alt="RESS VIP App UI" class="hero-phone-bg">
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
-        <!-- 3. How it works -->
-        <section class="steps-section">
-            <div class="container">
-                <div class="text-center">
-                    <h2>Get started in three simple steps</h2>
+<!-- 2. Product row -->
+<section class="section-fullscreen section-surface ecosystem-section">
+    <div class="container">
+        <div class="ecosystem-header text-center" style="margin: 0 auto 3rem;">
+            <h2>One app. Four ways RESS looks after you.</h2>
+        </div>
+
+        <div class="ecosystem-grid">
+            <a href="ride-options.html" class="eco-card" data-color="#279d9f">
+                <div class="eco-card-left">
+                    <div class="eco-icon"><img src="assets/images/Group-2042.svg" alt="Ride"></div>
+                    <h3>RESS Ride</h3>
                 </div>
-                <div class="steps-grid">
-                    <div class="step-card">
-                        <div class="step-icon">1</div>
-                        <h3>Download the app.</h3>
-                        <p>Create your account in the app.</p>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-icon">2</div>
-                        <h3>Choose what you need.</h3>
-                        <p>A ride, a meal, emergency help or a mechanic.</p>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-icon">3</div>
-                        <h3>Go with confidence.</h3>
-                        <p>Share your trip, alert your contacts and stay protected from start to finish.</p>
-                    </div>
+                <div class="eco-card-right">
+                    <p>Book a ride with safety built into every trip.</p>
+                    <span class="eco-explore text-teal" style="font-weight: 600;">Explore RESS Ride</span>
                 </div>
+            </a>
+
+            <a href="eat.html" class="eco-card" data-color="#ffa74f">
+                <div class="eco-card-left">
+                    <div class="eco-icon"><img src="assets/images/Group-2043.svg" alt="Eat"></div>
+                    <h3>RESS Eat</h3>
+                </div>
+                <div class="eco-card-right">
+                    <p>Order from registered restaurants and see the cost and delivery time before you pay.</p>
+                    <span class="eco-explore text-teal" style="font-weight: 600;">Explore RESS Eat</span>
+                </div>
+            </a>
+
+            <a href="ress-security.html" class="eco-card" data-color="#ce3375">
+                <div class="eco-card-left">
+                    <div class="eco-icon"><img src="assets/images/Group-2012687.svg" alt="Security"></div>
+                    <h3>RESS Security</h3>
+                </div>
+                <div class="eco-card-right">
+                    <p>Reach help fast when you feel unsafe.</p>
+                    <span class="eco-explore text-teal" style="font-weight: 600;">Explore RESS Security</span>
+                </div>
+            </a>
+
+            <a href="ress-services.html" class="eco-card" data-color="#1b5091">
+                <div class="eco-card-left">
+                    <div class="eco-icon"><img src="assets/images/Subtraction-205.svg" alt="Services"></div>
+                    <h3>RESS Services</h3>
+                </div>
+                <div class="eco-card-right">
+                    <p>Connect with trusted mechanics, electricians, plumbers and technicians on-demand help for every need.</p>
+                    <span class="eco-explore text-teal" style="font-weight: 600;">Explore RESS Services</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- 3. How it works -->
+<section class="section-fullscreen section-light steps-section">
+    <div class="container">
+        <div class="text-center" style="max-width: 760px; margin: 0 auto 3.5rem;">
+            <h2>Get started in three simple steps</h2>
+        </div>
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-icon">1</div>
+                <h3>Download the app.</h3>
+                <p>Create your account in the app.</p>
             </div>
-        </section>
-
-        <!-- 4. Why RESS -->
-        <section class="benefits-section">
-            <div class="container">
-                <div class="text-center">
-                    <h2>Built around your safety</h2>
-                </div>
-                <div class="benefits-grid">
-                    <div class="benefit-card">
-                        <img src="assets/images/Shild-20Icon.svg" alt="Verified" class="benefit-icon">
-                        <h4>Verified people.</h4>
-                        <p>Drivers and service providers go through verification and background checks.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <img src="assets/images/Path-20Icon.svg" alt="Safety" class="benefit-icon">
-                        <h4>Safety built in.</h4>
-                        <p>Share your ride live with the people you trust.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <img src="assets/images/chart-area-line.svg" alt="Costs" class="benefit-icon">
-                        <h4>Clear costs.</h4>
-                        <p>See what you will pay before you order.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <img src="assets/images/Group-2012687.svg" alt="Emergency" class="benefit-icon">
-                        <h4>Emergency contacts.</h4>
-                        <p>Quickly alert the people who matter most.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <img src="assets/images/Setings-20Icon.svg" alt="Data" class="benefit-icon">
-                        <h4>Protected data.</h4>
-                        <p>Your information is encrypted and handled with care.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <img src="assets/images/Group-2042.svg" alt="All in one" class="benefit-icon">
-                        <h4>Everything in one place.</h4>
-                        <p>Rides, food, security and services in a single app.</p>
-                    </div>
-                </div>
+            <div class="step-card">
+                <div class="step-icon">2</div>
+                <h3>Choose what you need.</h3>
+                <p>A ride, a meal, emergency help or a mechanic.</p>
             </div>
-        </section>
-
-        <!-- 5. Safety highlight & 6. Advanced features -->
-        <section class="tech-security">
-            <div class="security-overlay"></div>
-            <div class="container">
-                <div class="security-grid">
-                    <div class="security-visual">
-                        <img src="assets/images/05.png" alt="Safety Features" style="max-height: 600px; margin: 0 auto;">
-                    </div>
-
-                    <div class="security-text">
-                        <h2>Safety isn't an extra.</h2>
-                        <p>It's the foundation. Every part of RESS, from booking a ride to calling for help, is designed
-                            to protect you. Verified drivers, live ride sharing, emergency contacts and safe-zone alerts
-                            work together so you never travel alone.</p>
-                        <a href="safety.html" class="btn btn-outline"
-                            style="margin-top: 1rem; border-color: rgba(255,255,255,0.2); color: white;">See how RESS
-                            keeps you safe</a>
-
-                        <div style="margin-top: 3rem;">
-                            <h3>Smart features that look out for you</h3>
-                            <div class="security-features" style="margin-top: 1rem;">
-                                <div class="sec-feature">
-                                    <div class="dot"></div>
-                                    <div>
-                                        <h4>Integrated ride ordering</h4>
-                                        <p style="font-size:0.9rem;">Book rides and share your journey live.</p>
-                                    </div>
-                                </div>
-                                <div class="sec-feature">
-                                    <div class="dot"></div>
-                                    <div>
-                                        <h4>Safeguard services</h4>
-                                        <p style="font-size:0.9rem;">Order food and call for security help from the same
-                                            app.</p>
-                                    </div>
-                                </div>
-                                <div class="sec-feature">
-                                    <div class="dot"></div>
-                                    <div>
-                                        <h4>Emergency contact integration</h4>
-                                        <p style="font-size:0.9rem;">Quickly notify your emergency contacts when
-                                            something feels wrong.</p>
-                                    </div>
-                                </div>
-                                <div class="sec-feature">
-                                    <div class="dot"></div>
-                                    <div>
-                                        <h4>Geofencing for safety</h4>
-                                        <p style="font-size:0.9rem;">Set safe zones and get an alert when you leave
-                                            them.</p>
-                                    </div>
-                                </div>
-                                <div class="sec-feature">
-                                    <div class="dot"></div>
-                                    <div>
-                                        <h4>Robust security measures</h4>
-                                        <p style="font-size:0.9rem;">Verification, background checks and encryption keep
-                                            you protected.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="step-card">
+                <div class="step-icon">3</div>
+                <h3>Go with confidence.</h3>
+                <p>Share your trip, alert your contacts and stay protected from start to finish.</p>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
-        <!-- 7. App screenshots -->
-        <section class="screenshots-section">
-            <h2>See RESS in action.</h2>
-            <p style="color: #AAA;">Take a look at the screens that keep you moving safely.</p>
-            <div class="screenshots-track">
-                <div class="screenshot-item"><img src="assets/images/01.png" alt="App Screen 1"></div>
-                <div class="screenshot-item"><img src="assets/images/02.png" alt="App Screen 2"></div>
-                <div class="screenshot-item"><img src="assets/images/03.png" alt="App Screen 3"></div>
-                <div class="screenshot-item"><img src="assets/images/04.png" alt="App Screen 4"></div>
-                <div class="screenshot-item"><img src="assets/images/05.png" alt="App Screen 5"></div>
-                <div class="screenshot-item"><img src="assets/images/06.png" alt="App Screen 6"></div>
-                <div class="screenshot-item"><img src="assets/images/07.png" alt="App Screen 7"></div>
-                <div class="screenshot-item"><img src="assets/images/08.png" alt="App Screen 8"></div>
-                <div class="screenshot-item"><img src="assets/images/09.png" alt="App Screen 9"></div>
-                <div class="screenshot-item"><img src="assets/images/10.png" alt="App Screen 10"></div>
-                <div class="screenshot-item"><img src="assets/images/11.png" alt="App Screen 11"></div>
+<!-- 4. Why RESS -->
+<section class="section-fullscreen section-surface benefits-section">
+    <div class="container">
+        <div class="text-center" style="max-width: 760px; margin: 0 auto 3.5rem;">
+            <h2>Built around your safety</h2>
+        </div>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <img src="assets/images/Shild-20Icon.svg" alt="Verified" class="benefit-icon">
+                <h4>Verified people.</h4>
+                <p>Drivers and service providers go through verification and background checks.</p>
             </div>
-        </section>
-
-        <!-- 8. Drive banner & 9. Business banner -->
-        <section class="offset-features">
-            <div class="container">
-                <div class="offset-row">
-                    <div class="offset-text">
-                        <h2>Drive with Ress.</h2>
-                        <p>Join a platform built around safety for drivers as much as for riders.</p>
-                        <a href="drive.html" class="btn btn-primary" style="margin-top: 1rem;">Learn how to drive with
-                            RESS</a>
-                    </div>
-                    <div class="offset-image">
-                        <img src="assets/images/02.png" alt="Drive with RESS" style="max-height: 400px; margin: 0 auto;">
-                    </div>
-                </div>
-
-                <div class="offset-row">
-                    <div class="offset-text">
-                        <h2>Safe, reliable rides for your team.</h2>
-                        <p>Give your staff and guests dependable transport with one business account.</p>
-                        <a href="business.html" class="btn btn-primary" style="margin-top: 1rem;">Talk to our business
-                            team</a>
-                    </div>
-                    <div class="offset-image">
-                        <img src="assets/images/09.png" alt="RESS for Business" style="max-height: 400px; margin: 0 auto;">
-                    </div>
-                </div>
+            <div class="benefit-card">
+                <img src="assets/images/Path-20Icon.svg" alt="Safety" class="benefit-icon">
+                <h4>Safety built in.</h4>
+                <p>Share your ride live with the people you trust.</p>
             </div>
-        </section>
+            <div class="benefit-card">
+                <img src="assets/images/chart-area-line.svg" alt="Costs" class="benefit-icon">
+                <h4>Clear costs.</h4>
+                <p>See what you will pay before you order.</p>
+            </div>
+            <div class="benefit-card">
+                <img src="assets/images/Group-2012687.svg" alt="Emergency" class="benefit-icon">
+                <h4>Emergency contacts.</h4>
+                <p>Quickly alert the people who matter most.</p>
+            </div>
+            <div class="benefit-card">
+                <img src="assets/images/Setings-20Icon.svg" alt="Data" class="benefit-icon">
+                <h4>Protected data.</h4>
+                <p>Your information is encrypted and handled with care.</p>
+            </div>
+            <div class="benefit-card">
+                <img src="assets/images/Group-2042.svg" alt="All in one" class="benefit-icon">
+                <h4>Everything in one place.</h4>
+                <p>Rides, food, security and services in a single app.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-        <!-- 10. Testimonials -->
-        <section class="testimonials-section">
-            <div class="container">
-                <h2>What our community says.</h2>
-                <div class="testimonial-grid">
-                    <div class="testimonial-card">
-                        <p>"RESS is my absolute go-to for moving around the city safely. The live ride sharing is
-                            fantastic."</p>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1531123897727-8f129e1bfff1?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80"
-                                alt="Sarah">
+<!-- 5. Safety highlight & Advanced features -->
+<section class="section-fullscreen tech-security">
+    <div class="security-overlay"></div>
+    <div class="container">
+        <div class="security-grid">
+            <div class="security-visual">
+                <img src="assets/images/05.png" alt="Safety Features" style="max-height: 600px; margin: 0 auto;">
+            </div>
+
+            <div class="security-text">
+                <h2>Safety isn't an extra.</h2>
+                <p>It's the foundation. Every part of RESS, from booking a ride to calling for help, is designed to protect you. Verified drivers, live ride sharing, emergency contacts and safe-zone alerts work together so you never travel alone.</p>
+                <a href="safety.html" class="btn btn-outline" style="margin-top: 1rem; border-color: rgba(255,255,255,0.2); color: white;">See how RESS keeps you safe</a>
+
+                <div style="margin-top: 3rem;">
+                    <h3>Smart features that look out for you</h3>
+                    <div class="security-features" style="margin-top: 1rem;">
+                        <div class="sec-feature">
+                            <div class="dot"></div>
                             <div>
-                                <strong>Sarah M.</strong>
-                                <span>Rider</span>
+                                <h4>Integrated ride ordering</h4>
+                                <p style="font-size:0.9rem;">Book rides and share your journey live.</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <p>"Driving with RESS feels completely different. I know I am protected and supported on every
-                            trip."</p>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80"
-                                alt="David">
+                        <div class="sec-feature">
+                            <div class="dot"></div>
                             <div>
-                                <strong>David O.</strong>
-                                <span>Verified Driver</span>
+                                <h4>Safeguard services</h4>
+                                <p style="font-size:0.9rem;">Order food and call for security help from the same app.</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <p>"I had a breakdown late at night, and RESS Services sent a mechanic immediately. Truly a
-                            lifesaver."</p>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80"
-                                alt="Aisha">
+                        <div class="sec-feature">
+                            <div class="dot"></div>
                             <div>
-                                <strong>Aisha K.</strong>
-                                <span>Rider</span>
+                                <h4>Emergency contact integration</h4>
+                                <p style="font-size:0.9rem;">Quickly notify your emergency contacts when something feels wrong.</p>
+                            </div>
+                        </div>
+                        <div class="sec-feature">
+                            <div class="dot"></div>
+                            <div>
+                                <h4>Geofencing for safety</h4>
+                                <p style="font-size:0.9rem;">Set safe zones and get an alert when you leave them.</p>
+                            </div>
+                        </div>
+                        <div class="sec-feature">
+                            <div class="dot"></div>
+                            <div>
+                                <h4>Robust security measures</h4>
+                                <p style="font-size:0.9rem;">Verification, background checks and encryption keep you protected.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
-        {{> global-cta}}
+<!-- 6. App Screenshots Slider with Phone Mockup -->
+<section id="screenshots" class="section-fullscreen section-surface screenshots-section">
+    <div class="container" style="max-width: 1440px;">
+        <div class="text-center" style="max-width: 760px; margin: 0 auto 1.5rem;">
+            <h2>See RESS in action</h2>
+            <p style="color: var(--text-secondary); margin-top: 0.75rem; font-size: 1.1rem; line-height: 1.6;">
+                RESS goes beyond being a safety tool; it is envisioned as a lifestyle companion dedicated to enhancing the well-being of our users.
+            </p>
+        </div>
 
-        <!-- 12. FAQ -->
-        <section class="faq-section">
-            <div class="container">
-                <div class="text-center">
-                    <h2>Questions? We have answers.</h2>
+        <div class="screenshots-slider-wrapper">
+            <!-- Mobile Phone Mockup Overlay Frame -->
+            <div class="slider-phone-frame" aria-hidden="true"></div>
+
+            <!-- Swiper Slider Container -->
+            <div class="swiper screenshots-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/images/01.png" alt="RESS App Profile Screen">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/02.png" alt="RESS App Preferences Screen">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/03.png" alt="RESS App Live Route Alert Screen">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/04.png" alt="RESS App My Trips Screen">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/05.png" alt="RESS App Safety Chat Screen">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/06.png" alt="RESS App Food Delivery Screen">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/07.png" alt="RESS App Emergency Alert Screen">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/08.png" alt="RESS App Artisan Booking Screen">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/09.png" alt="RESS App Business Fleet Screen">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/10.png" alt="RESS App Driver Navigation Screen">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/11.png" alt="RESS App Security Response Screen">
+                    </div>
                 </div>
-                <div class="faq-container">
-                    <div class="faq-item">
-                        <div class="faq-question">What is RESS? <span>+</span></div>
-                        <div class="faq-answer">RESS is an all-in-one app that brings together ride ordering, food
-                            delivery, security assistance and vehicle services, with safety at the centre of everything.
-                        </div>
+
+                <!-- Navigation Arrow Chevrons -->
+                <button type="button" class="slider-arrow slider-arrow-prev" aria-label="Previous screenshot">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <button type="button" class="slider-arrow slider-arrow-next" aria-label="Next screenshot">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- 9. Testimonials -->
+<section class="section-fullscreen section-surface testimonials-section">
+    <div class="container">
+        <div class="text-center" style="max-width: 760px; margin: 0 auto 3.5rem;">
+            <h2>What our community says.</h2>
+        </div>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <p>"Late evenings leaving the office in Victoria Island used to make me anxious. With RESS Ride, I can share my live journey with my family in one tap, and the drivers are always verified and courteous."</p>
+                <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=160&h=160&q=80" alt="Amina Bello">
+                    <div>
+                        <strong>Amina Bello</strong>
+                        <span>RESS Ride User</span>
                     </div>
-                    <div class="faq-item">
-                        <div class="faq-question">How do I sign up? <span>+</span></div>
-                        <div class="faq-answer">Download the RESS app from the App Store or Google Play and create your
-                            account in the app.</div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">Is RESS safe? <span>+</span></div>
-                        <div class="faq-answer">RESS uses verification and background checks, real-time ride sharing,
-                            emergency contact alerts, safe-zone alerts and encrypted data.</div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">Can I order food and a ride from the same app? <span>+</span></div>
-                        <div class="faq-answer">Yes. RESS Ride and RESS Eat live in the same app, along with RESS
-                            Security and RESS Services.</div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">How do I become a driver? <span>+</span></div>
-                        <div class="faq-answer">Download the app and follow the driver registration steps inside it.
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center" style="margin-top: 2rem;">
-                    <a href="help.html" class="text-teal">Visit the Help Center </a>
                 </div>
             </div>
-        </section>
+            <div class="testimonial-card">
+                <p>"Ordering lunch for my team used to come with hidden delivery markups. On RESS Eat, the menu prices and delivery arrival times are transparent before checkout, and our meals always arrive fresh."</p>
+                <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?auto=format&fit=crop&w=160&h=160&q=80" alt="Chinedu Eze">
+                    <div>
+                        <strong>Chinedu Eze</strong>
+                        <span>RESS Eat Diner</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p>"Having dependable ride hailing and my favorite local restaurants inside the same app makes daily life simple. From early morning airport trips to Sunday family dinners, RESS has proven reliable."</p>
+                <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=160&h=160&q=80" alt="Folake Adeleke">
+                    <div>
+                        <strong>Folake Adeleke</strong>
+                        <span>Ride and Food Delivery User</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{> global-cta}}
+
+<!-- 10. FAQ -->
+<section class="section-fullscreen section-light faq-section">
+    <div class="container">
+        <div class="text-center" style="max-width: 760px; margin: 0 auto 3.5rem;">
+            <h2>Questions? We have answers.</h2>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">What is RESS? <span>+</span></div>
+                <div class="faq-answer">RESS is an all-in-one app that brings together ride ordering, food delivery, security assistance and vehicle services, with safety at the centre of everything.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How do I sign up? <span>+</span></div>
+                <div class="faq-answer">Download the RESS app from the App Store or Google Play and create your account in the app.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Is RESS safe? <span>+</span></div>
+                <div class="faq-answer">RESS uses verification and background checks, real-time ride sharing, emergency contact alerts, safe-zone alerts and encrypted data.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Can I order food and a ride from the same app? <span>+</span></div>
+                <div class="faq-answer">Yes. RESS Ride and RESS Eat live in the same app, along with RESS Security and RESS Services.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How do I become a driver? <span>+</span></div>
+                <div class="faq-answer">Download the app and follow the driver registration steps inside it.</div>
+            </div>
+        </div>
+        <div class="text-center" style="margin-top: 2rem;">
+            <a href="help.html" class="text-teal">Visit the Help Center</a>
+        </div>
+    </div>
+</section>

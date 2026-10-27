@@ -1,66 +1,445 @@
 ---
-title: RESS Eat - Food Delivery from Registered Restaurants
-description: Order from registered restaurants, see the cost and delivery time first and pay securely in the app.
-showCta: true
+title: RESS Eat - Food and Retail Delivery for Businesses and Diners
+description: Partner with RESS Eat or order delicious food and daily essentials. Zero setup costs, transparent fees, weekly merchant payouts, and fast delivery across Nigeria.
+pageClass: page-fullscreen page-eat
+showCta: false
+scripts: |
+    <script>
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('click', () => {
+                const ans = q.nextElementSibling;
+                const span = q.querySelector('span');
+                if (ans.style.display === 'block') {
+                    ans.style.display = 'none';
+                    span.textContent = '+';
+                } else {
+                    ans.style.display = 'block';
+                    span.textContent = '-';
+                }
+            });
+        });
+    </script>
 ---
-<section class="hero-layered" style="min-height: 70vh; padding-top: 120px;">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h1 class="animate-up" style="font-size: 3.5rem;">Good food, <br><span class="text-teal">delivered safe.</span></h1>
-                        <p class="animate-up" style="animation-delay: 0.1s; margin-top: 1rem; color: #CCC;">Order from registered restaurants, see the cost and delivery time upfront, and pay securely in the app.</p>
-                        <div class="store-buttons animate-up" style="animation-delay: 0.2s;" style="margin-top: 2rem;">
-                            <a href="get-app.html"><img src="assets/images/Apple-20store.svg" alt="App Store"></a>
-                            <a href="get-app.html"><img src="assets/images/play-20store.svg" alt="Google Play"></a>
+<!-- 1. Hero Section -->
+<section class="section-fullscreen hero-layered">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text" style="max-width: 620px;">
+                <h1 class="animate-up" style="font-size: 3.25rem; line-height: 1.15; color: #FFFFFF;">
+                    Fresh meals and essentials. <br><span class="text-teal">Delivered with care.</span>
+                </h1>
+                <p class="animate-up" style="animation-delay: 0.1s; margin-top: 1.25rem; font-size: 1.15rem; color: #CCCCCC; line-height: 1.6;">
+                    Order from registered restaurants, neighborhood grocers, and specialty stores across Nigerian cities. Transparent item pricing, upfront delivery fees, and live courier tracking to your doorstep.
+                </p>
+                <div class="animate-up" style="animation-delay: 0.2s; margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+                    <a href="#order-flow" class="btn btn-primary">How ordering works</a>
+                </div>
+            </div>
+            <div class="hero-visual animate-up" style="animation-delay: 0.25s; display: flex; justify-content: center;">
+                <img src="assets/images/eat_hero.png" alt="RESS Eat Food and Merchant App" class="hero-phone-bg" style="width: 100%; max-height: 860px; object-fit: contain; transform: scale(1.18); transform-origin: center center;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 2. How Ordering Works for Diners -->
+<section id="order-flow" class="section-fullscreen section-light">
+    <div class="container">
+        <div class="text-center" style="max-width: 720px; margin: 0 auto 3.5rem;">
+            <h2>How RESS Eat works for diners</h2>
+            <p style="color: var(--text-secondary); margin-top: 0.75rem; font-size: 1.1rem;">
+                Four simple steps from finding your favorite dish to greeting your delivery driver.
+            </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem;">
+            <div class="benefit-card" style="text-align: left;">
+                <div style="font-size: 1.75rem; font-weight: 800; color: var(--brand-teal); margin-bottom: 1rem;">1</div>
+                <h4>Choose a store</h4>
+                <p>Explore registered restaurants, local eateries, supermarkets, and specialty food merchants near your location.</p>
+            </div>
+            <div class="benefit-card" style="text-align: left;">
+                <div style="font-size: 1.75rem; font-weight: 800; color: var(--brand-teal); margin-bottom: 1rem;">2</div>
+                <h4>Review clear pricing</h4>
+                <p>Check the meal costs, packaging fees, and exact delivery charge before placing your order. No hidden surprises.</p>
+            </div>
+            <div class="benefit-card" style="text-align: left;">
+                <div style="font-size: 1.75rem; font-weight: 800; color: var(--brand-teal); margin-bottom: 1rem;">3</div>
+                <h4>Pay securely</h4>
+                <p>Complete your payment using your Nigerian debit card, in-app wallet balance, or direct bank transfer.</p>
+            </div>
+            <div class="benefit-card" style="text-align: left;">
+                <div style="font-size: 1.75rem; font-weight: 800; color: var(--brand-teal); margin-bottom: 1rem;">4</div>
+                <h4>Track your meal</h4>
+                <p>Follow your verified delivery rider live on the map from kitchen pickup until your parcel reaches your door.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 3. Trusted by Businesses Everywhere (Merchant Partnership Overview) -->
+<section id="merchants" class="section-fullscreen section-surface">
+    <div class="container">
+        <div class="text-center" style="max-width: 780px; margin: 0 auto 3.5rem;">
+            <h2>Trusted by businesses everywhere</h2>
+            <p style="color: var(--brand-teal); font-weight: 600; font-size: 1.15rem; margin-top: 0.5rem;">
+                Join 5,000+ businesses growing on RESS Eat
+            </p>
+            <p style="color: var(--text-secondary); margin-top: 0.75rem; font-size: 1.1rem; line-height: 1.6;">
+                Whether you run a restaurant, grocery store, or florist, start earning fast with no setup costs, transparent fees, and weekly payouts.
+            </p>
+        </div>
+
+        <div class="benefits-grid" style="margin-top: 0;">
+            <div class="benefit-card">
+                <img src="assets/images/eat-chart.svg" alt="Zero setup costs" class="benefit-icon">
+                <h4>No setup costs</h4>
+                <p>Join the platform and list your full menu without paying upfront onboarding fees or subscription charges.</p>
+            </div>
+            <div class="benefit-card">
+                <img src="assets/images/eat-shield.svg" alt="Transparent fees" class="benefit-icon">
+                <h4>Transparent fees</h4>
+                <p>Understand your exact deductions on every completed order with clear itemized transaction summaries.</p>
+            </div>
+            <div class="benefit-card">
+                <img src="assets/images/eat-settings.svg" alt="Weekly payouts" class="benefit-icon">
+                <h4>Weekly payouts</h4>
+                <p>Receive your earnings sent directly to your verified commercial bank account on a dependable weekly cycle.</p>
+            </div>
+            <div class="benefit-card">
+                <img src="assets/images/eat-path.svg" alt="Dedicated delivery fleet" class="benefit-icon">
+                <h4>Vetted delivery dispatch</h4>
+                <p>Rely on our network of screened motorcycle couriers equipped with insulated, temperature-controlled delivery boxes.</p>
+            </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 3.5rem; padding-top: 2.5rem; border-top: 1px solid var(--border-color); text-align: center;">
+            <div>
+                <div style="font-size: 2rem; font-weight: 800; color: var(--brand-teal);">5,000+</div>
+                <div style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.25rem;">Active store locations</div>
+            </div>
+            <div>
+                <div style="font-size: 2rem; font-weight: 800; color: var(--brand-teal);">0 Naira</div>
+                <div style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.25rem;">Upfront listing cost</div>
+            </div>
+            <div>
+                <div style="font-size: 2rem; font-weight: 800; color: var(--brand-teal);">Weekly</div>
+                <div style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.25rem;">Direct bank settlements</div>
+            </div>
+            <div>
+                <div style="font-size: 2rem; font-weight: 800; color: var(--brand-teal);">35 mins</div>
+                <div style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.25rem;">Average fulfillment speed</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 4. RESS Eat for All Types of Businesses -->
+<section class="section-fullscreen section-light">
+    <div class="container">
+        <div class="text-center" style="max-width: 760px; margin: 0 auto 3.5rem;">
+            <h2>RESS Eat for all types of businesses</h2>
+            <p style="color: var(--text-secondary); margin-top: 0.75rem; font-size: 1.1rem;">
+                From florists to pet and electronics stores, businesses of all kinds use RESS Eat to reach more local customers.
+            </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.75rem;">
+            <div style="background: var(--surface-color); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 2rem;">
+                <div style="width: 44px; height: 44px; border-radius: 8px; background: rgba(255, 167, 79, 0.15); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--brand-teal)" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+                </div>
+                <h4 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Restaurants and Grills</h4>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0; line-height: 1.55;">
+                    Local dishes, quick-service eateries, continental dining, and roadside grills expanding pickup and door-to-door delivery.
+                </p>
+            </div>
+
+            <div style="background: var(--surface-color); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 2rem;">
+                <div style="width: 44px; height: 44px; border-radius: 8px; background: rgba(255, 167, 79, 0.15); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--brand-teal)" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                </div>
+                <h4 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Supermarkets and Groceries</h4>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0; line-height: 1.55;">
+                    Fresh fruits, pantry staples, dairy products, and household necessities delivered to customers within 35 minutes.
+                </p>
+            </div>
+
+            <div style="background: var(--surface-color); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 2rem;">
+                <div style="width: 44px; height: 44px; border-radius: 8px; background: rgba(255, 167, 79, 0.15); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--brand-teal)" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+                </div>
+                <h4 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Bakeries and Pastries</h4>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0; line-height: 1.55;">
+                    Freshly baked bread, celebration cakes, snack platters, and confectionery orders transported intact in climate-safe boxes.
+                </p>
+            </div>
+
+            <div style="background: var(--surface-color); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 2rem;">
+                <div style="width: 44px; height: 44px; border-radius: 8px; background: rgba(255, 167, 79, 0.15); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--brand-teal)" stroke-width="2"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7z"></path><circle cx="12" cy="9" r="2.5"></circle></svg>
+                </div>
+                <h4 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Florists and Gift Boutiques</h4>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0; line-height: 1.55;">
+                    Fresh floral bouquets, custom greeting hampers, indoor plants, and party gift sets delivered safely on exact schedules.
+                </p>
+            </div>
+
+            <div style="background: var(--surface-color); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 2rem;">
+                <div style="width: 44px; height: 44px; border-radius: 8px; background: rgba(255, 167, 79, 0.15); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--brand-teal)" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                </div>
+                <h4 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Pet and Specialty Stores</h4>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0; line-height: 1.55;">
+                    Pet foods, veterinary supplies, specialized nutritional items, and organic goods dispatched directly to customer homes.
+                </p>
+            </div>
+
+            <div style="background: var(--surface-color); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 2rem;">
+                <div style="width: 44px; height: 44px; border-radius: 8px; background: rgba(255, 167, 79, 0.15); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--brand-teal)" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+                </div>
+                <h4 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Electronics and Essentials</h4>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0; line-height: 1.55;">
+                    Charging accessories, audio gear, and urgent personal care items brought swiftly to neighborhood buyers.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 5. Get Started Quickly (Merchant Onboarding) -->
+<section id="get-started" class="section-fullscreen section-surface">
+    <div class="container">
+        <div class="offset-row" style="margin-bottom: 0; align-items: center; gap: 4rem;">
+            <div class="offset-text">
+                <h2>Start selling on RESS Eat in a week</h2>
+                <p style="color: var(--text-secondary); margin-top: 0.75rem; font-size: 1.1rem; line-height: 1.6;">
+                    Register your business, add your menu, and get ready to receive orders. Our onboarding specialists assist you at every step.
+                </p>
+
+                <div style="display: grid; gap: 1.5rem; margin-top: 2rem;">
+                    <div style="display: flex; gap: 1.25rem; align-items: flex-start;">
+                        <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--brand-teal); color: #000; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">1</div>
+                        <div>
+                            <h4 style="font-size: 1.15rem; margin-bottom: 0.35rem;">Register your business</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0;">Add your business details, operating address, and set up your store profile with our team.</p>
                         </div>
                     </div>
-                    <div class="hero-visual animate-up" style="animation-delay: 0.3s;">
-                        <img src="assets/images/ress-eat-mockup.png" alt="RESS Eat App" class="hero-phone-bg" style="max-height: 600px; object-fit: contain; filter: drop-shadow(0 25px 50px rgba(0,0,0,0.6));">
+                    <div style="display: flex; gap: 1.25rem; align-items: flex-start;">
+                        <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--brand-teal); color: #000; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">2</div>
+                        <div>
+                            <h4 style="font-size: 1.15rem; margin-bottom: 0.35rem;">Menu setup</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0;">Create a menu of all the items you sell. Our onboarding team is on hand to help upload photos and descriptions.</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 1.25rem; align-items: flex-start;">
+                        <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--brand-teal); color: #000; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">3</div>
+                        <div>
+                            <h4 style="font-size: 1.15rem; margin-bottom: 0.35rem;">Start selling</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0;">Once we review your menu, your listing goes live and you are ready to start making sales.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-        
-        <section class="container" style="padding: 5rem 0;">
-            <div class="text-center" style="margin-bottom: 3rem;">
-                <h2>Craving something? We've got it.</h2>
-                <p style="color: var(--text-secondary); max-width: 600px; margin: 1rem auto 0;">Your favorite meals delivered from the best registered restaurants in your city.</p>
-            </div>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <img src="assets/images/Group-2043.svg" alt="Restaurant" class="benefit-icon">
-                    <h4>1. Choose a restaurant</h4>
-                    <p>Browse registered restaurants near you and explore their menus.</p>
-                </div>
-                <div class="benefit-card">
-                    <img src="assets/images/chart-area-line.svg" alt="Cost" class="benefit-icon">
-                    <h4>2. See the cost</h4>
-                    <p>Know the total cost and when to expect your meal before you order.</p>
-                </div>
-                <div class="benefit-card">
-                    <img src="assets/images/Shild-20Icon.svg" alt="Pay" class="benefit-icon">
-                    <h4>3. Pay in the app</h4>
-                    <p>Use our integrated, secure payment options.</p>
-                </div>
-                <div class="benefit-card">
-                    <img src="assets/images/Path-20Icon.svg" alt="Enjoy" class="benefit-icon">
-                    <h4>4. Enjoy your meal</h4>
-                    <p>Follow your order live on the map until it arrives at your door.</p>
-                </div>
-            </div>
-        </section>
 
-        <section class="offset-features" style="background: var(--surface-color); padding: 5rem 0;">
-            <div class="container">
-                <div class="offset-row">
-                    <div class="offset-text">
-                        <h2>Run a restaurant?</h2>
-                        <p>Partner with RESS Eat to reach more customers. We offer transparent pricing, reliable delivery drivers, and powerful tools to help your business grow.</p>
-                        <a href="business.html" class="btn btn-primary" style="margin-top: 1rem;">Become a partner</a>
+            <div class="offset-image" style="display: flex; justify-content: center;">
+                <div style="background: var(--bg-color); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 2.5rem; box-shadow: var(--shadow-sm); width: 100%; max-width: 480px;">
+                    <h3 style="margin-bottom: 1.25rem; font-size: 1.35rem;">Merchant partner checklist</h3>
+                    <ul class="feature-list" style="margin: 0; padding: 0;">
+                        <li class="feature-list-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-teal)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>CAC business registration certificate</span>
+                        </li>
+                        <li class="feature-list-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-teal)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>Physical kitchen or retail store location</span>
+                        </li>
+                        <li class="feature-list-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-teal)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>Menu with pricing and product descriptions</span>
+                        </li>
+                        <li class="feature-list-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-teal)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>Active corporate or business bank account</span>
+                        </li>
+                        <li class="feature-list-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-teal)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>Android or iOS device for order management</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 6. Merchant Portal Section -->
+<section id="portal" class="section-fullscreen section-dark">
+    <div class="container">
+        <div class="offset-row" style="margin-bottom: 0; align-items: center; gap: 4rem;">
+            <div class="offset-text">
+                <h2 style="color: #FFFFFF;">Merchant Portal</h2>
+                <p style="color: var(--brand-teal); font-weight: 600; font-size: 1.25rem; margin-top: 0.5rem;">
+                    Your dashboard for insights and growth
+                </p>
+                <p style="color: #CCCCCC; margin-top: 0.75rem; font-size: 1.1rem; line-height: 1.6;">
+                    Get sales and performance insights and manage your business all in one place with the Merchant Portal.
+                </p>
+
+                <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 2rem;">
+                    <div>
+                        <h4 style="color: #FFFFFF; font-size: 1.15rem; margin-bottom: 0.35rem;">Live sales and growth insights</h4>
+                        <p style="color: #AAAAAA; margin: 0; font-size: 0.95rem;">Review hourly order volume, customer reorder frequency, average ticket size, and weekly settlement reports.</p>
                     </div>
-                    <div class="offset-image" style="background: var(--bg-color); border-radius: var(--radius-lg); padding: 2rem; display: flex; justify-content: center; align-items: center;">
-                        <img src="assets/images/ress-eat-mockup.png" alt="Restaurant Partner" style="max-height: 400px; border-radius: 12px; filter: drop-shadow(0 15px 30px rgba(0,0,0,0.15));">
+                    <div>
+                        <h4 style="color: #FFFFFF; font-size: 1.15rem; margin-bottom: 0.35rem;">Real-time kitchen order queue</h4>
+                        <p style="color: #AAAAAA; margin: 0; font-size: 0.95rem;">Accept incoming orders with a single tap, set custom preparation windows, and notify riders when orders are bagged.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #FFFFFF; font-size: 1.15rem; margin-bottom: 0.35rem;">Instant catalog and price control</h4>
+                        <p style="color: #AAAAAA; margin: 0; font-size: 0.95rem;">Mark sold-out dishes immediately to prevent order cancellations and manage item availability on the fly.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="offset-image" style="display: flex; justify-content: center; width: 100%;">
+                <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: var(--radius-lg); padding: 2rem; width: 100%; max-width: 500px; box-shadow: 0 20px 40px rgba(0,0,0,0.4);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 1.25rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+                        <div>
+                            <div style="color: #FFFFFF; font-weight: 700; font-size: 1.1rem;">Nuudel Kitchen</div>
+                            <div style="color: var(--brand-teal); font-size: 0.85rem; font-weight: 600;">Store Open | Accepting Orders</div>
+                        </div>
+                        <div style="background: rgba(255, 167, 79, 0.18); color: var(--brand-teal); padding: 0.35rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">
+                            Live Portal
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.25rem;">
+                        <div style="background: rgba(0,0,0,0.25); padding: 1rem; border-radius: 8px;">
+                            <div style="color: #888888; font-size: 0.8rem;">Today's Orders</div>
+                            <div style="color: #FFFFFF; font-size: 1.4rem; font-weight: 700; margin-top: 0.25rem;">48</div>
+                        </div>
+                        <div style="background: rgba(0,0,0,0.25); padding: 1rem; border-radius: 8px;">
+                            <div style="color: #888888; font-size: 0.8rem;">Today's Revenue</div>
+                            <div style="color: var(--brand-teal); font-size: 1.4rem; font-weight: 700; margin-top: 0.25rem;">&#8358;384,500</div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 1.5rem;">
+                        <div style="color: #FFFFFF; font-weight: 600; font-size: 0.95rem; margin-bottom: 0.75rem;">Active Kitchen Queue</div>
+                        <div style="display: grid; gap: 0.75rem;">
+                            <div style="background: rgba(0,0,0,0.25); padding: 0.85rem 1rem; border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
+                                <div>
+                                    <div style="color: #FFFFFF; font-size: 0.9rem; font-weight: 600;">Order #3902 (2 items)</div>
+                                    <div style="color: #888888; font-size: 0.8rem;">Wok-Fried Noodles, Prawns</div>
+                                </div>
+                                <span style="background: rgba(255, 167, 79, 0.25); color: var(--brand-teal); font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 700;">Preparing (10m)</span>
+                            </div>
+                            <div style="background: rgba(0,0,0,0.25); padding: 0.85rem 1rem; border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
+                                <div>
+                                    <div style="color: #FFFFFF; font-size: 0.9rem; font-weight: 600;">Order #3901 (1 item)</div>
+                                    <div style="color: #888888; font-size: 0.8rem;">Spicy Beef Bao Buns</div>
+                                </div>
+                                <span style="background: rgba(255, 255, 255, 0.1); color: #CCCCCC; font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 600;">Rider Matched</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
+
+<!-- 7. Merchant Testimonial -->
+<section class="section-fullscreen section-light">
+    <div class="container">
+        <div style="max-width: 840px; margin: 0 auto; text-align: center;">
+            <div style="width: 50px; height: 50px; margin: 0 auto 1.5rem; background: rgba(255, 167, 79, 0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--brand-teal)"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            </div>
+            <blockquote style="font-size: 1.65rem; line-height: 1.5; color: var(--text-primary); font-weight: 600; margin: 0 0 2rem;">
+                "Thanks to the RESS Eat platform, we have seen significant growth in sales and expanded to new locations without hiring our own motorcycle fleet. Courier pickups are reliable, customer satisfaction is high, and our earnings land in our account every week without delay."
+            </blockquote>
+            <div>
+                <strong style="display: block; font-size: 1.15rem; color: var(--text-primary);">Maarja Kelder</strong>
+                <span style="color: var(--text-secondary); font-size: 0.95rem;">Restaurant owner, Nuudel</span>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 3.5rem; padding-top: 3rem; border-top: 1px solid var(--border-color);">
+                <div>
+                    <div style="font-size: 2rem; font-weight: 800; color: var(--brand-teal);">35 mins</div>
+                    <div style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.25rem;">Average fulfillment speed</div>
+                </div>
+                <div>
+                    <div style="font-size: 2rem; font-weight: 800; color: var(--brand-teal);">0 Naira</div>
+                    <div style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.25rem;">Upfront listing cost</div>
+                </div>
+                <div>
+                    <div style="font-size: 2rem; font-weight: 800; color: var(--brand-teal);">Weekly</div>
+                    <div style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.25rem;">Automated bank payouts</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 8. Ready to Grow CTA (Without Store Icons) -->
+<section class="section-fullscreen section-dark" style="background: linear-gradient(135deg, var(--darker-bg) 0%, #2e1e12 100%);">
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 4rem; flex-wrap: wrap;">
+        <div class="cta-text" style="flex: 1; color: #fff; min-width: 300px;">
+            <h2 style="font-size: 2.75rem; margin-bottom: 1rem; color: #fff; font-weight: 700;">Ready to start selling on RESS Eat?</h2>
+            <p style="font-size: 1.15rem; color: rgba(255,255,255,0.8); max-width: 520px; margin-bottom: 2.5rem; line-height: 1.6;">
+                Join our growing network of verified restaurants, supermarkets, and specialty retailers. Set up your store profile today and start reaching customers in your neighborhood.
+            </p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <a href="get-app.html" class="btn btn-primary">Download restaurant app</a>
+            </div>
+        </div>
+        <div class="cta-image" style="flex: 1; text-align: center; position: relative; min-width: 300px;">
+            <div style="position: absolute; top: 20%; right: 20%; width: 280px; height: 280px; background: #FFA74F; filter: blur(100px); opacity: 0.2; border-radius: 50%; z-index: 1;"></div>
+            <img src="assets/images/App-Mobile-Screen-Mockup.png" alt="RESS Food Ordering App" style="width: 100%; max-height: 520px; object-fit: contain; position: relative; z-index: 2;">
+        </div>
+    </div>
+</section>
+
+<!-- 9. Frequently Asked Questions -->
+<section id="faq" class="section-fullscreen section-light faq-section">
+    <div class="container">
+        <div class="text-center" style="max-width: 720px; margin: 0 auto 3.5rem;">
+            <h2>Frequently asked questions</h2>
+            <p style="color: var(--text-secondary); margin-top: 0.75rem; font-size: 1.1rem;">
+                Clear answers regarding merchant onboarding, commissions, payouts, and delivery.
+            </p>
+        </div>
+
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">How fast can my business start selling on RESS Eat? <span>+</span></div>
+                <div class="faq-answer">Most merchants go live within 5 to 7 business days. Once you register your business and submit your catalog, our team formats your listing and activates your store profile.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What fees or commissions does RESS charge merchant partners? <span>+</span></div>
+                <div class="faq-answer">There are zero listing or registration fees to join RESS Eat. We agree on a transparent commission per fulfilled order, allowing you to grow your business without fixed operational overhead.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do restaurant and grocery partners receive their earnings? <span>+</span></div>
+                <div class="faq-answer">All order earnings are calculated automatically and disbursed on a weekly schedule directly into your registered Nigerian corporate bank account, complete with itemized transaction reports.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can non-restaurant businesses like supermarkets or bakeries join? <span>+</span></div>
+                <div class="faq-answer">Yes. RESS Eat supports supermarkets, bakeries, florists, pet shops, and specialty food retailers. Our platform is built for any merchant providing consumable or urgent goods to local customers.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How does RESS Eat keep food hot and secure during transit? <span>+</span></div>
+                <div class="faq-answer">Every delivery courier is equipped with insulated, weather-sealed carrier bags. Merchants seal order packaging before dispatch, ensuring your meals arrive at the right temperature and untouched.</div>
+            </div>
+        </div>
+
+    </div>
+</section>

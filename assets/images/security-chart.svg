@@ -1,0 +1,5 @@
+<svg id="chart-area-line" xmlns="http://www.w3.org/2000/svg" width="51" height="51" viewBox="0 0 51 51">
+  <path id="Path_81164" data-name="Path 81164" d="M0,0H51V51H0Z" fill="none"/>
+  <path id="Path_81165" data-name="Path 81165" d="M4,29.125l8.5-12.75,8.5,4.25L29.5,10,38,18.5V29.125H4" transform="translate(4.5 11.25)" fill="none" stroke="#272727" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+  <path id="Path_81166" data-name="Path 81166" d="M4,21l6.375-8.5,8.5,4.25L29.5,4,38,12.5" transform="translate(4.5 4.5)" fill="none" stroke="#CE3375" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+</svg>
