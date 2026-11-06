@@ -1,90 +1,252 @@
 ---
-title: Drive with RESS - Earn with Confidence
-description: Learn what it takes to drive with RESS and register in the app to get started.
-showCta: true
+title: Drive with RESS - Flexible Work and Verified Earnings
+description: Earn on your own terms with RESS. Get upfront route visibility, pricing control, zero-penalty schedule freedom, and 24/7 dedicated safety support across Nigeria.
+pageClass: page-fullscreen
+showCta: false
+scripts: |
+    <script>
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('click', () => {
+                const ans = q.nextElementSibling;
+                const span = q.querySelector('span');
+                if (ans.style.display === 'block') {
+                    ans.style.display = 'none';
+                    span.textContent = '+';
+                } else {
+                    ans.style.display = 'block';
+                    span.textContent = '-';
+                }
+            });
+        });
+    </script>
 ---
-<section class="hero-layered" style="min-height: 70vh; padding-top: 120px;">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h1 class="animate-up" style="font-size: 3.5rem;">Drive with Ress. <br><span class="text-teal">Earn with confidence.</span></h1>
-                        <p class="animate-up" style="animation-delay: 0.1s; margin-top: 1rem; color: #CCC;">Join a platform built around safety, with tools that protect you as much as your riders. Register in the app to get started today.</p>
-                        <div class="store-buttons animate-up" style="animation-delay: 0.2s;" style="margin-top: 2rem;">
-                            <a href="get-app.html"><img src="assets/images/Apple-20store.svg" alt="App Store"></a>
-                            <a href="get-app.html"><img src="assets/images/play-20store.svg" alt="Google Play"></a>
-                        </div>
-                    </div>
-                    <div class="hero-visual animate-up" style="animation-delay: 0.3s;">
-                        <img src="assets/images/Phone-Instagram-Mockup.png" alt="RESS Driver App" class="hero-phone-bg" style="max-height: 600px; object-fit: contain;">
-                    </div>
+<!-- 1. Hero Section -->
+<section class="section-fullscreen hero-layered">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text" style="max-width: 620px;">
+                <h1 class="animate-up" style="font-size: 3.25rem; line-height: 1.15; color: #FFFFFF;">
+                    Drive on your schedule. <br><span class="text-teal">Earn with clarity.</span>
+                </h1>
+                <p class="animate-up" style="animation-delay: 0.1s; margin-top: 1.25rem; font-size: 1.15rem; color: #CCCCCC; line-height: 1.6;">
+                    Take the wheel with RESS. Enjoy full route visibility before you accept, set or counter passenger fares, and drive with zero schedule penalties backed by 24/7 safety response teams.
+                </p>
+                <div class="animate-up" style="animation-delay: 0.2s; margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+                    <a href="#requirements" class="btn btn-primary">Driver requirements</a>
+                    <a href="#why-choose-us" class="btn btn-outline" style="border-color: rgba(255,255,255,0.35); color: #FFFFFF;">Why drive with RESS</a>
                 </div>
             </div>
-        </section>
+            <div class="hero-visual animate-up" style="animation-delay: 0.25s; display: flex; justify-content: center;">
+                <img src="assets/images/Phone-Instagram-Mockup.png" alt="RESS Driver App Interface" class="hero-phone-bg" style="width: 100%; max-height: 760px; object-fit: contain; transform: scale(1.08); transform-origin: center center;">
+            </div>
+        </div>
+    </div>
+</section>
 
-        <section class="container" style="padding: 2rem 0 4rem;">
-            <div style="background: var(--surface-color); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 3rem; display: flex; align-items: center; gap: 2rem; box-shadow: var(--shadow-sm);">
-                <div style="flex: 0 0 auto; background: rgba(34, 189, 179, 0.1); padding: 1.5rem; border-radius: 50%;">
-                    <img src="assets/images/chart-area-line.svg" alt="Earnings" width="40" height="40">
-                </div>
-                <div>
-                    <h2 style="margin-bottom: 0.5rem; font-size: 1.75rem; display: flex; align-items: center; gap: 1rem;">Clear Earnings <span style="font-size: 0.75rem; background: var(--brand-teal); color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Paid directly in-app</span></h2>
-                    <p style="font-size: 1.1rem; color: var(--text-secondary); margin: 0; max-width: 700px;">See exactly what you earn for every trip with full transparency before you accept. Your earnings are secure and paid directly to you through the app.</p>
-                </div>
-            </div>
-        </section>
+<!-- 2. Why Drivers Choose RESS -->
+<section id="why-choose-us" class="section-fullscreen section-light">
+    <div class="container">
+        <div class="text-center" style="max-width: 720px; margin: 0 auto 3.5rem;">
+            <h2>Why professional drivers choose RESS</h2>
+            <p style="color: var(--text-secondary); margin-top: 0.75rem; font-size: 1.1rem;">
+                A partner platform built to give drivers real control, transparent fares, and round-the-clock safety.
+            </p>
+        </div>
 
-        <section class="container" style="padding: 5rem 0;">
-            <div class="text-center" style="margin-bottom: 3rem;">
-                <h2>Why drivers choose RESS</h2>
-                <p style="color: var(--text-secondary); max-width: 600px; margin: 1rem auto 0;">Drive on your terms while backed by our robust safety and support systems.</p>
+        <div class="benefits-grid" style="margin-top: 0;">
+            <div class="benefit-card">
+                <img src="assets/images/chart-area-line.svg" alt="Pricing control" class="benefit-icon">
+                <h4>Pricing control</h4>
+                <p>Set your own rate or counter passenger offers when standard fares do not reflect heavy traffic or peak fuel costs.</p>
             </div>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <img src="assets/images/Setings-20Icon.svg" alt="Terms" class="benefit-icon">
-                    <h4>Work on your terms</h4>
-                    <p>Choose when and where you drive. You are in complete control of your schedule.</p>
-                </div>
-                <div class="benefit-card">
-                    <img src="assets/images/chart-area-line.svg" alt="Earnings" class="benefit-icon">
-                    <h4>Clear earnings</h4>
-                    <p>See exactly what you earn for every trip with full transparency before you accept.</p>
-                </div>
-                <div class="benefit-card">
-                    <img src="assets/images/Shild-20Icon.svg" alt="Safety" class="benefit-icon">
-                    <h4>Safety tools</h4>
-                    <p>Emergency contact alerts, live trip sharing, and a verified rider community protect you on the road.</p>
-                </div>
-                <div class="benefit-card">
-                    <img src="assets/images/Group-2042.svg" alt="Support" class="benefit-icon">
-                    <h4>24/7 Support</h4>
-                    <p>Reach the RESS team directly through the app whenever you need assistance.</p>
-                </div>
+            <div class="benefit-card">
+                <img src="assets/images/Path-20Icon.svg" alt="Route visibility" class="benefit-icon">
+                <h4>Full route visibility</h4>
+                <p>View the passenger pickup spot, destination landmark, and total trip distance before deciding to accept.</p>
             </div>
-        </section>
+            <div class="benefit-card">
+                <img src="assets/images/Setings-20Icon.svg" alt="Freedom to choose" class="benefit-icon">
+                <h4>Freedom to choose</h4>
+                <p>Decline or skip ride requests that do not fit your route or schedule, with zero account penalties or rating drops.</p>
+            </div>
+            <div class="benefit-card">
+                <img src="assets/images/Shild-20Icon.svg" alt="Safety and emergency response" class="benefit-icon">
+                <h4>Safety and emergency response</h4>
+                <p>Drive protected with in-app SOS buttons directly linked to 24/7 dedicated RESS security rapid response teams.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-        <section class="offset-features" style="background: var(--surface-color); padding: 5rem 0;">
-            <div class="container">
-                <div class="offset-row">
-                    <div class="offset-text">
-                        <h2>Ready to get started?</h2>
-                        <div style="margin-top: 1.5rem;">
-                            <h4 style="margin-bottom: 0.5rem; color: var(--brand-teal);">1. What you need</h4>
-                            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">A valid driver's licence, vehicle papers and insurance, a government-issued ID, a smartphone, and a clean background check.</p>
-                            
-                            <h4 style="margin-bottom: 0.5rem; color: var(--brand-teal);">2. Getting on the road</h4>
-                            <p style="color: var(--text-secondary);">Download the RESS app, register as a driver, complete your quick verification, and you are ready to go online and start earning.</p>
-                        </div>
-                        <div class="store-buttons" style="margin-top: 2rem; justify-content: flex-start;">
-                            <a href="get-app.html"><img src="assets/images/Apple-20store.svg" alt="App Store"></a>
-                            <a href="get-app.html"><img src="assets/images/play-20store.svg" alt="Google Play"></a>
-                        </div>
-                    </div>
-                    <div class="offset-image" style="background: var(--bg-color); border-radius: var(--radius-lg); padding: 3rem; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
-                        <img src="assets/images/10.png" alt="Fleet Owners" style="max-height: 250px; border-radius: 12px; margin-bottom: 2rem;">
-                        <h3>Fleet Owners</h3>
-                        <p style="color: var(--text-secondary); margin-top: 0.5rem;">Own more than one vehicle? Talk to us about adding your entire fleet to Ress.</p>
-                        <a href="contact.html?topic=fleet" class="btn" style="margin-top: 1rem; border: 1px solid var(--border-color);">Talk to our team</a>
-                    </div>
+<!-- 3. Driver Requirements & Verification -->
+<section id="requirements" class="section-fullscreen section-surface">
+    <div class="container">
+        <div class="offset-row" style="margin-bottom: 0; align-items: center; gap: 4rem;">
+            <div class="offset-text">
+                <h2>What you need to drive with RESS</h2>
+                <p style="color: var(--text-secondary); margin-top: 0.75rem; font-size: 1.1rem; line-height: 1.6;">
+                    Joining RESS is simple. Download the driver app, submit your documents for swift verification, and start taking ride requests across your city.
+                </p>
+
+                <ul class="feature-list" style="margin-top: 2rem;">
+                    <li class="feature-list-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-teal)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span><strong>Valid driver's license</strong>: Issued by the Federal Road Safety Corps (FRSC).</span>
+                    </li>
+                    <li class="feature-list-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-teal)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span><strong>Identity verification</strong>: Valid NIN or international passport.</span>
+                    </li>
+                    <li class="feature-list-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-teal)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span><strong>Vehicle documents</strong>: Valid vehicle license, roadworthiness certificate, and insurance.</span>
+                    </li>
+                    <li class="feature-list-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-teal)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span><strong>Vehicle standards</strong>: Four-door sedan, hatchback, or SUV with fully functioning air conditioning.</span>
+                    </li>
+                    <li class="feature-list-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-teal)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span><strong>Smartphone</strong>: An active device running iOS 14 or Android 8.0 and above.</span>
+                    </li>
+                </ul>
+
+                <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="get-app.html" class="btn btn-primary">Get the RESS Driver app</a>
+                </div>
+
+                <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+                    <p style="font-size: 0.95rem; color: var(--text-secondary); margin: 0;">
+                        Managing multiple vehicles or drivers? <a href="contact.html?topic=fleet" style="color: var(--brand-teal); font-weight: 600;">Register as a fleet partner</a>
+                    </p>
                 </div>
             </div>
-        </section>
+
+            <div class="offset-image" style="display: flex; justify-content: center;">
+                <img src="assets/images/App-Mobile-Screen-Mockup2-20download.png" alt="RESS Driver App verification and download" style="width: 100%; max-height: 600px; object-fit: contain; transform: scale(1.05);">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 4. How the RESS Driver App Works -->
+<section id="how-it-works" class="section-fullscreen section-light">
+    <div class="container">
+        <div class="text-center" style="max-width: 720px; margin: 0 auto 3.5rem;">
+            <h2>How the RESS Driver app works</h2>
+            <p style="color: var(--text-secondary); margin-top: 0.75rem; font-size: 1.1rem;">
+                Four straightforward steps to go online, accept trips, and receive payments.
+            </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem;">
+            <div class="benefit-card" style="text-align: left;">
+                <div style="font-size: 1.75rem; font-weight: 800; color: var(--brand-teal); margin-bottom: 1rem;">1</div>
+                <h4>Go online</h4>
+                <p>Open the RESS Driver app and switch your status to online whenever you are ready to receive ride requests.</p>
+            </div>
+            <div class="benefit-card" style="text-align: left;">
+                <div style="font-size: 1.75rem; font-weight: 800; color: var(--brand-teal); margin-bottom: 1rem;">2</div>
+                <h4>Review and accept</h4>
+                <p>Examine the incoming passenger pickup point, drop-off destination, and upfront fare before tapping to accept.</p>
+            </div>
+            <div class="benefit-card" style="text-align: left;">
+                <div style="font-size: 1.75rem; font-weight: 800; color: var(--brand-teal); margin-bottom: 1rem;">3</div>
+                <h4>Pick up your rider</h4>
+                <p>Follow turn-by-turn navigation directly to the pickup point and communicate via in-app call or chat.</p>
+            </div>
+            <div class="benefit-card" style="text-align: left;">
+                <div style="font-size: 1.75rem; font-weight: 800; color: var(--brand-teal); margin-bottom: 1rem;">4</div>
+                <h4>Complete and collect</h4>
+                <p>Drop off the passenger, mark the ride complete, and see your earnings deposited immediately into your driver wallet.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 5. Operational Tools for Everyday Driving -->
+<section id="driver-tools" class="section-fullscreen section-dark">
+    <div class="container">
+        <div class="offset-row" style="margin-bottom: 0; align-items: center; gap: 4rem;">
+            <div class="offset-text">
+                <h2 style="color: #FFFFFF;">Every tool you need inside one driver app</h2>
+                <p style="color: #CCCCCC; margin-top: 0.75rem; font-size: 1.1rem; line-height: 1.6;">
+                    Built from the ground up to reduce driving friction, secure your communication, and give you full visibility over your daily income.
+                </p>
+
+                <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 2rem;">
+                    <div>
+                        <h4 style="color: #FFFFFF; font-size: 1.15rem; margin-bottom: 0.35rem;">Real-time trip requests</h4>
+                        <p style="color: #AAAAAA; margin: 0; font-size: 0.95rem;">Receive incoming trip requests based on your current location and corridor demand across the city.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #FFFFFF; font-size: 1.15rem; margin-bottom: 0.35rem;">Direct rider communication</h4>
+                        <p style="color: #AAAAAA; margin: 0; font-size: 0.95rem;">Call or message riders directly through the app with masked numbers to keep your personal contact private.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #FFFFFF; font-size: 1.15rem; margin-bottom: 0.35rem;">Live earnings dashboard</h4>
+                        <p style="color: #AAAAAA; margin: 0; font-size: 0.95rem;">Track daily and weekly totals with clear deductions and transfer balances to your verified Nigerian bank account.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #FFFFFF; font-size: 1.15rem; margin-bottom: 0.35rem;">Trip history and route records</h4>
+                        <p style="color: #AAAAAA; margin: 0; font-size: 0.95rem;">Access past trip receipts, route traces, distance records, and rider feedback anytime for your tax and bookkeeping needs.</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2.5rem;">
+                    <a href="get-app.html" class="btn btn-primary">Explore driver tools in the app</a>
+                </div>
+            </div>
+
+            <div class="offset-image" style="display: flex; justify-content: center;">
+                <img src="assets/images/change-route.png" alt="RESS Driver mobile tools" style="width: 100%; max-height: 600px; object-fit: contain;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 6. Ready to Go CTA -->
+{{> global-cta}}
+
+<!-- 7. Frequently Asked Questions -->
+<section id="faq" class="section-fullscreen section-light faq-section">
+    <div class="container">
+        <div class="text-center" style="max-width: 720px; margin: 0 auto 3.5rem;">
+            <h2>Frequently asked driver questions</h2>
+            <p style="color: var(--text-secondary); margin-top: 0.75rem; font-size: 1.1rem;">
+                Clear answers regarding payments, vehicle qualification, and platform rules.
+            </p>
+        </div>
+
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">How and when do I receive trip earnings? <span>+</span></div>
+                <div class="faq-answer">Trip earnings are credited directly to your in-app driver wallet upon ride completion. You can request instant payouts to your verified Nigerian commercial bank account at any time.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Do I face penalties if I decline a ride request? <span>+</span></div>
+                <div class="faq-answer">No. You have complete freedom to choose which trips to accept. Declining or skipping requests does not carry account suspension penalties or hidden deductions.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What vehicle requirements must my car meet? <span>+</span></div>
+                <div class="faq-answer">Vehicles must be four-door sedans, hatchbacks, or SUVs in clean condition with fully functional air conditioning, valid insurance, and roadworthiness certification.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How does safety and emergency support work during a trip? <span>+</span></div>
+                <div class="faq-answer">The RESS Driver app includes a dedicated in-app SOS emergency button. Pressing it immediately shares your live coordinates with our 24/7 emergency dispatch and alerts rapid response security units in your area.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I register as a fleet owner with multiple vehicles? <span>+</span></div>
+                <div class="faq-answer">Yes. Fleet owners can register multiple vehicles and assign authorized drivers through the RESS fleet portal. Contact our fleet team through our contact page to set up a commercial partner account.</div>
+            </div>
+        </div>
+
+        <div class="text-center" style="margin-top: 3.5rem;">
+            <a href="help.html" class="text-teal" style="font-weight: 600; font-size: 1.05rem;">Visit the Driver Help Center</a>
+        </div>
+    </div>
+</section>

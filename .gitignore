@@ -29,3 +29,4 @@ dist/
 tmp/
 scratch/
 .system_generated/
+.netlify/

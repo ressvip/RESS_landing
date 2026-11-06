@@ -1,61 +1,340 @@
 ---
-title: RESS Services - Book Artisans & Professionals
-description: Need a mechanic, electrician, plumber, or artisan? Request vetted professionals instantly from the RESS app.
-showCta: true
+title: RESS Services - Book Verified Artisans and Trade Specialists
+description: Find vetted electricians, plumbers, air conditioning technicians, carpenters, and painters. Upfront pricing, background-checked trade specialists, live arrival tracking, and warranty-backed craftsmanship across Nigeria.
+pageClass: page-fullscreen page-services
+showCta: false
+scripts: |
+    <script>
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('click', () => {
+                const ans = q.nextElementSibling;
+                const span = q.querySelector('span');
+                if (ans.style.display === 'block') {
+                    ans.style.display = 'none';
+                    span.textContent = '+';
+                } else {
+                    ans.style.display = 'block';
+                    span.textContent = '-';
+                }
+            });
+        });
+    </script>
 ---
-<section class="hero-layered" style="min-height: 70vh; padding-top: 120px;">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h1 class="animate-up" style="font-size: 3.5rem;">Expert help, <br><span class="text-teal">at your doorstep.</span></h1>
-                        <p class="animate-up" style="animation-delay: 0.1s; margin-top: 1rem; color: #CCC;">From mechanics to electricians, plumbers to artisans. Book vetted, trusted professionals instantly directly through the RESS app.</p>
-                        <div class="store-buttons animate-up" style="animation-delay: 0.2s;" style="margin-top: 2rem;">
-                            <a href="get-app.html"><img src="assets/images/Apple-20store.svg" alt="App Store"></a>
-                            <a href="get-app.html"><img src="assets/images/play-20store.svg" alt="Google Play"></a>
-                        </div>
-                    </div>
-                    <div class="hero-visual animate-up" style="animation-delay: 0.3s;">
-                        <img src="assets/images/ress-services-mockup.png" alt="RESS Services App" class="hero-phone-bg" style="max-height: 620px; width: auto; object-fit: contain; filter: drop-shadow(0 25px 50px rgba(0,0,0,0.6));">
-                    </div>
+<!-- 1. Hero Section -->
+<section class="section-fullscreen hero-layered">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text" style="max-width: 620px;">
+                <h1 class="animate-up" style="font-size: 3.25rem; line-height: 1.15; color: #FFFFFF;">
+                    Verified artisans and home trade professionals on demand.
+                </h1>
+                <p class="animate-up" style="animation-delay: 0.1s; margin-top: 1.25rem; font-size: 1.15rem; color: #CCCCCC; line-height: 1.6;">
+                    From certified electricians and plumbers to skilled carpenters and air-conditioning technicians. Book background-checked professionals with upfront pricing, live tracking, and guaranteed craftsmanship across Nigerian cities.
+                </p>
+                <div class="animate-up" style="animation-delay: 0.2s; margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+                    <a href="#how-it-works" class="btn btn-primary">How RESS Services works</a>
                 </div>
             </div>
-        </section>
-        
-        <section class="container" style="padding: 5rem 0;">
-            <div class="text-center" style="margin-bottom: 3rem;">
-                <h2>How RESS Services works</h2>
-                <p style="color: var(--text-secondary); max-width: 600px; margin: 1rem auto 0;">Connecting you with vetted artisans and professionals when you need them most.</p>
-            </div>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <img src="assets/images/Path-20Icon.svg" alt="Location" class="benefit-icon">
-                    <h4>1. Describe your need</h4>
-                    <p>Tell us what service you need (plumbing, electrical, mechanic, etc.) and share your location.</p>
-                </div>
-                <div class="benefit-card">
-                    <img src="assets/images/Group-2042.svg" alt="Match" class="benefit-icon">
-                    <h4>2. Get matched</h4>
-                    <p>A qualified, background-checked artisan or professional accepts your request immediately.</p>
-                </div>
-                <div class="benefit-card">
-                    <img src="assets/images/Shild-20Icon.svg" alt="Go" class="benefit-icon">
-                    <h4>3. Job well done</h4>
-                    <p>Pay easily in the app and rate your experience so we maintain top quality standards.</p>
+            <div class="hero-visual animate-up" style="animation-delay: 0.25s; display: flex; justify-content: center;">
+                <div style="position: relative; width: 100%; display: flex; justify-content: center; align-items: center;">
+                    <div style="position: absolute; top: 25%; left: 30%; width: 220px; height: 220px; background: #1B5091; filter: blur(90px); opacity: 0.3; border-radius: 50%; z-index: 1;"></div>
+                    <img src="assets/images/ress-services-mockup.png" alt="RESS Services Artisan Mobile App" class="hero-phone-bg" style="position: relative; z-index: 2;">
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
-        <section class="offset-features" style="background: var(--surface-color); padding: 5rem 0;">
-            <div class="container">
-                <div class="offset-row">
-                    <div class="offset-text">
-                        <h2>Are you a professional artisan?</h2>
-                        <p>Join the RESS Services network to reach clients who need your skills. Whether you're a mechanic, electrician, plumber, or artisan, expand your business, enjoy transparent payments, and manage your jobs through a single app.</p>
-                        <a href="business.html" class="btn btn-primary" style="margin-top: 1rem;">Join as a provider</a>
-                    </div>
-                    <div class="offset-image" style="background: var(--bg-color); border-radius: var(--radius-lg); padding: 2rem; display: flex; justify-content: center; align-items: center;">
-                        <img src="assets/images/App-Mobile-Screen-Mockup.png" alt="Professional Partner" style="max-height: 400px; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
-                    </div>
+<!-- 2. How RESS Services Works (Core 4 Steps) -->
+<section id="how-it-works" class="section-fullscreen section-light">
+    <div class="container">
+        <div class="text-center" style="max-width: 760px; margin: 0 auto 3.5rem;">
+            <h2>How RESS Services works</h2>
+            <p style="color: var(--text-secondary); margin-top: 0.75rem; font-size: 1.1rem;">
+                Four simple steps connecting your home or workplace to verified professional technicians.
+            </p>
+        </div>
+
+        <div class="services-2col-grid">
+            <div class="benefit-card" style="text-align: left;">
+                <img src="assets/images/services-settings.svg" alt="Select category" class="benefit-icon" style="margin-bottom: 1.25rem;">
+                <h4>1. Select your trade category</h4>
+                <p>Choose from electrical repair, plumbing, carpentry, air conditioning, painting, or general maintenance directly inside the RESS app.</p>
+            </div>
+            <div class="benefit-card" style="text-align: left;">
+                <img src="assets/images/services-chart.svg" alt="Upfront diagnostics" class="benefit-icon" style="margin-bottom: 1.25rem;">
+                <h4>2. Upfront pricing and diagnostics</h4>
+                <p>Review standardized inspection rates and diagnostic fees before confirming your request. No hidden call-out charges or surprise invoices.</p>
+            </div>
+            <div class="benefit-card" style="text-align: left;">
+                <img src="assets/images/services-path.svg" alt="Matched with specialists" class="benefit-icon" style="margin-bottom: 1.25rem;">
+                <h4>3. Matched with vetted specialists</h4>
+                <p>A background-checked, credentialed local artisan accepts your booking and navigates to your location with tracked arrival on the map.</p>
+            </div>
+            <div class="benefit-card" style="text-align: left;">
+                <img src="assets/images/services-shield.svg" alt="Secure payment" class="benefit-icon" style="margin-bottom: 1.25rem;">
+                <h4>4. Safe payment and service warranty</h4>
+                <p>Release payment only after testing and approving the completed job. Enjoy guaranteed protection backed by our 7-day workmanship warranty.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 3. Popular Service Categories -->
+<section id="categories" class="section-fullscreen section-surface">
+    <div class="container">
+        <div class="text-center" style="max-width: 800px; margin: 0 auto 3.5rem;">
+            <h2>Skilled trade categories available in your area</h2>
+            <p style="color: var(--brand-teal); font-weight: 600; font-size: 1.15rem; margin-top: 0.5rem;">
+                Specialized technicians ready for immediate visits or scheduled bookings
+            </p>
+            <p style="color: var(--text-secondary); margin-top: 0.75rem; font-size: 1.1rem; line-height: 1.6;">
+                Every category is staffed by licensed trade professionals equipped with diagnostic tools and quality replacement materials.
+            </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+            <div class="service-category-card">
+                <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(27, 80, 145, 0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B5091" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                    </svg>
+                </div>
+                <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem; color: var(--text-primary);">Electrical repairs and installations</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">
+                    Circuit breaker diagnosis, generator switchover systems, solar inverter setups, distribution board wiring, and lighting fixture installations.
+                </p>
+                <div style="margin-top: 1.25rem; font-size: 0.9rem; font-weight: 700; color: var(--brand-teal);">From 10,000 Naira per diagnostic visit</div>
+            </div>
+
+            <div class="service-category-card">
+                <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(27, 80, 145, 0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B5091" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                </div>
+                <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem; color: var(--text-primary);">Plumbing and water systems</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">
+                    Pipe leak detection, bathroom sanitary fittings, water heater repairs, borehole pump servicing, and drainage system unblocking.
+                </p>
+                <div style="margin-top: 1.25rem; font-size: 0.9rem; font-weight: 700; color: var(--brand-teal);">From 8,000 Naira per diagnostic visit</div>
+            </div>
+
+            <div class="service-category-card">
+                <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(27, 80, 145, 0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B5091" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 3v18M3 12h18M6.5 6.5l11 11M17.5 6.5l-11 11"></path>
+                    </svg>
+                </div>
+                <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem; color: var(--text-primary);">Air conditioning and cooling</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">
+                    Split unit chemical servicing, refrigerant gas refills, compressor fault troubleshooting, indoor coil cleaning, and new AC mounting.
+                </p>
+                <div style="margin-top: 1.25rem; font-size: 0.9rem; font-weight: 700; color: var(--brand-teal);">From 12,000 Naira per unit service</div>
+            </div>
+
+            <div class="service-category-card">
+                <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(27, 80, 145, 0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B5091" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                    </svg>
+                </div>
+                <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem; color: var(--text-primary);">Carpentry and woodwork</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">
+                    Kitchen cabinet repairs, custom wardrobe construction, wooden door hanging, lock replacement, and structural roof woodwork.
+                </p>
+                <div style="margin-top: 1.25rem; font-size: 0.9rem; font-weight: 700; color: var(--brand-teal);">From 9,000 Naira per visit</div>
+            </div>
+
+            <div class="service-category-card">
+                <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(27, 80, 145, 0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B5091" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                </div>
+                <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem; color: var(--text-primary);">Painting and wall finishes</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">
+                    Interior wall plastering, screeding, emulsion and gloss application, exterior weatherproofing coatings, and mold treatment.
+                </p>
+                <div style="margin-top: 1.25rem; font-size: 0.9rem; font-weight: 700; color: var(--brand-teal);">From 7,000 Naira per room assessment</div>
+            </div>
+
+            <div class="service-category-card">
+                <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(27, 80, 145, 0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B5091" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>
+                </div>
+                <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem; color: var(--text-primary);">Generator and appliance overhaul</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">
+                    Diesel and petrol generator engine servicing, carburetor replacement, washing machine motor repair, and refrigerator troubleshooting.
+                </p>
+                <div style="margin-top: 1.25rem; font-size: 0.9rem; font-weight: 700; color: var(--brand-teal);">From 10,000 Naira per diagnostic visit</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 4. The 5-Point Vetting Standard -->
+<section class="section-fullscreen section-light">
+    <div class="container">
+        <div class="text-center" style="max-width: 780px; margin: 0 auto 3.5rem;">
+            <h2>The RESS artisan vetting standard</h2>
+            <p style="color: var(--text-secondary); margin-top: 0.75rem; font-size: 1.1rem; line-height: 1.6;">
+                We verify every trade worker before they are permitted to accept jobs or enter your property.
+            </p>
+        </div>
+
+        <div class="services-2col-grid">
+            <div class="benefit-card" style="text-align: left;">
+                <img src="assets/images/Subtraction-205.svg" alt="Biometric verification" class="benefit-icon" style="margin-bottom: 1.25rem;">
+                <h4>Government identity check</h4>
+                <p>Every specialist provides verified National Identification Numbers (NIN), biometric capture, and verified residential address proofs.</p>
+            </div>
+            <div class="benefit-card" style="text-align: left;">
+                <img src="assets/images/services-shield.svg" alt="Trade competency" class="benefit-icon" style="margin-bottom: 1.25rem;">
+                <h4>Trade competency examination</h4>
+                <p>Artisans undergo skill testing and guild membership verification to ensure technical competence before activation on our platform.</p>
+            </div>
+            <div class="benefit-card" style="text-align: left;">
+                <img src="assets/images/services-chart.svg" alt="Standardized pricing" class="benefit-icon" style="margin-bottom: 1.25rem;">
+                <h4>Transparent price schedule</h4>
+                <p>Standardized diagnostic fees and labor rates eliminate arbitrary quote inflation. You review itemized costs before any work begins.</p>
+            </div>
+            <div class="benefit-card" style="text-align: left;">
+                <img src="assets/images/services-path.svg" alt="7-day warranty" class="benefit-icon" style="margin-bottom: 1.25rem;">
+                <h4>7-day craftsmanship warranty</h4>
+                <p>If an issue recurs within seven days of repair completion, RESS dispatches the specialist back to resolve it at zero additional labor cost.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 5. Transparent Job Management & Escrow Protection -->
+<section class="section-fullscreen section-surface">
+    <div class="container">
+        <div class="text-center" style="max-width: 800px; margin: 0 auto 3.5rem;">
+            <h2>Manage repairs with complete confidence</h2>
+            <p style="color: var(--text-secondary); margin-top: 0.75rem; font-size: 1.1rem; line-height: 1.6;">
+                Digital job tracking and secure payment handling protect both customers and craftsmen.
+            </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem;">
+            <div class="benefit-card" style="text-align: left;">
+                <div style="font-size: 1.75rem; font-weight: 800; color: var(--brand-teal); margin-bottom: 1rem;">1</div>
+                <h4>Live arrival tracking</h4>
+                <p>Watch your specialist navigate directly to your address on the in-app map with real-time arrival estimates.</p>
+            </div>
+            <div class="benefit-card" style="text-align: left;">
+                <div style="font-size: 1.75rem; font-weight: 800; color: var(--brand-teal); margin-bottom: 1rem;">2</div>
+                <h4>Digital parts approval</h4>
+                <p>Review photo receipts and approve replacement hardware in the app before the technician purchases any materials.</p>
+            </div>
+            <div class="benefit-card" style="text-align: left;">
+                <div style="font-size: 1.75rem; font-weight: 800; color: var(--brand-teal); margin-bottom: 1rem;">3</div>
+                <h4>Secure escrow release</h4>
+                <p>Funds are held safely in escrow and only disbursed to the artisan after you inspect and approve the completed job.</p>
+            </div>
+            <div class="benefit-card" style="text-align: left;">
+                <div style="font-size: 1.75rem; font-weight: 800; color: var(--brand-teal); margin-bottom: 1rem;">4</div>
+                <h4>Itemized work history</h4>
+                <p>Keep a permanent digital record of all repairs, parts warranties, and maintenance timestamps for your property records.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 6. Partner Onboarding for Trade Professionals -->
+<section class="section-fullscreen section-light">
+    <div class="container">
+        <div style="max-width: 840px; margin: 0 auto; text-align: center;">
+            <div style="width: 56px; height: 56px; margin: 0 auto 1.5rem; background: rgba(27, 80, 145, 0.12); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <img src="assets/images/Subtraction-205.svg" alt="Partner icon" width="28" height="28">
+            </div>
+            <h2 style="margin-bottom: 1.25rem;">Are you a qualified artisan or trade contractor?</h2>
+            <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.6; max-width: 680px; margin: 0 auto 2.5rem;">
+                Expand your client base, receive consistent bookings from verified homeowners and businesses, and manage your income with weekly bank settlements.
+            </p>
+            <div>
+                <a href="business.html" class="btn btn-primary">Join as a service partner</a>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 3.5rem; padding-top: 3rem; border-top: 1px solid var(--border-color);">
+                <div>
+                    <div style="font-size: 2rem; font-weight: 800; color: var(--brand-teal);">Weekly</div>
+                    <div style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.25rem;">Direct bank deposits</div>
+                </div>
+                <div>
+                    <div style="font-size: 2rem; font-weight: 800; color: var(--brand-teal);">0 Naira</div>
+                    <div style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.25rem;">Monthly subscription fee</div>
+                </div>
+                <div>
+                    <div style="font-size: 2rem; font-weight: 800; color: var(--brand-teal);">10,000+</div>
+                    <div style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.25rem;">Active monthly service requests</div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
+
+<!-- 7. Ready to Book a Professional CTA -->
+<section class="section-fullscreen section-dark" style="background: linear-gradient(135deg, var(--darker-bg) 0%, #0d223d 100%);">
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 4rem; flex-wrap: wrap;">
+        <div class="cta-text" style="flex: 1; color: #fff; min-width: 300px;">
+            <h2 style="font-size: 2.75rem; margin-bottom: 1rem; color: #fff; font-weight: 700;">Need a trusted hand for your home or office?</h2>
+            <p style="font-size: 1.15rem; color: rgba(255,255,255,0.8); max-width: 520px; margin-bottom: 2.5rem; line-height: 1.6;">
+                Download the RESS app to search verified local plumbers, electricians, carpenters, and technicians near you today.
+            </p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <a href="get-app.html" class="btn btn-primary">Download services app</a>
+            </div>
+        </div>
+        <div class="cta-image" style="flex: 1; text-align: center; position: relative; min-width: 300px;">
+            <div style="position: absolute; top: 20%; right: 20%; width: 280px; height: 280px; background: #1B5091; filter: blur(100px); opacity: 0.3; border-radius: 50%; z-index: 1;"></div>
+            <img src="assets/images/App-Mobile-Screen-Mockup.png" alt="RESS Services App Mockup" style="width: 100%; max-height: 520px; object-fit: contain; position: relative; z-index: 2;">
+        </div>
+    </div>
+</section>
+
+<!-- 8. Frequently Asked Questions -->
+<section id="faq" class="section-fullscreen section-light faq-section">
+    <div class="container">
+        <div class="text-center" style="max-width: 720px; margin: 0 auto 3.5rem;">
+            <h2>Frequently asked questions</h2>
+            <p style="color: var(--text-secondary); margin-top: 0.75rem; font-size: 1.1rem;">
+                Clear information on artisan screening, pricing, material purchases, and warranties.
+            </p>
+        </div>
+
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">How does RESS screen artisans before they accept jobs? <span>+</span></div>
+                <div class="faq-answer">Every artisan completes a mandatory identity verification process using their National Identity Number (NIN), provides proof of address, and undergoes practical trade skill assessments with trade guilds before their account is activated.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How are labor costs and replacement parts billed? <span>+</span></div>
+                <div class="faq-answer">Diagnostic visit fees are displayed upfront in the app. If replacement hardware or spare parts are required, the specialist submits photo receipts through the app for your digital approval before purchasing.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What if the repair or installation is unsatisfactory? <span>+</span></div>
+                <div class="faq-answer">Payment is held securely in escrow and only released after you test and confirm the repair. If an issue recurs within seven days, we dispatch the technician back to fix the problem under our 7-day workmanship guarantee.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I schedule a service for a future date and time? <span>+</span></div>
+                <div class="faq-answer">Yes. You can request immediate dispatch for urgent emergencies like burst pipes or power outages, or schedule an appointment for any convenient date and time up to two weeks in advance.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How can qualified artisans and contractors register with RESS? <span>+</span></div>
+                <div class="faq-answer">Trade professionals can sign up through our business portal by submitting government identification, trade credentials, and reference contacts. Onboarding is free with zero monthly subscription fees.</div>
+            </div>
+        </div>
+    </div>
+</section>

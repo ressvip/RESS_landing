@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
 
-    // 2. Cookie Banner Logic (Professional compliance behaviour)
+    // 4. Cookie Banner Logic (Professional compliance behaviour)
     const cookieBanner = document.getElementById('cookie-banner');
     const acceptBtn = document.getElementById('accept-cookies');
     const rejectBtn = document.getElementById('reject-cookies');
@@ -60,40 +60,54 @@ document.addEventListener('DOMContentLoaded', () => {
     if (acceptBtn) acceptBtn.addEventListener('click', () => hideBanner('accepted'));
     if (rejectBtn) rejectBtn.addEventListener('click', () => hideBanner('declined'));
 
-    // 3. Mobile Menu Toggle
+    // 5. Mobile Navigation Menu Toggle (Clean class-based approach)
     const mobileToggle = document.getElementById('mobile-menu-toggle');
-    const navLinks = document.getElementById('nav-links');
 
-    if (mobileToggle && navLinks) {
-        mobileToggle.addEventListener('click', () => {
-            // Very basic toggle for demonstration
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-            navLinks.style.flexDirection = 'column';
-            navLinks.style.position = 'absolute';
-            navLinks.style.top = '100%';
-            navLinks.style.left = '0';
-            navLinks.style.right = '0';
-            navLinks.style.backgroundColor = 'white';
-            navLinks.style.padding = '1rem';
-            navLinks.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
+    if (mobileToggle && navbar) {
+        mobileToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = navbar.classList.toggle('menu-open');
+            mobileToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        // Close menu when clicking anywhere outside navbar
+        document.addEventListener('click', (e) => {
+            if (navbar.classList.contains('menu-open') && !navbar.contains(e.target)) {
+                navbar.classList.remove('menu-open');
+                mobileToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Close menu on link click (except dropdown-toggle)
+        navbar.querySelectorAll('.nav-links a:not(.dropdown-toggle)').forEach(link => {
+            link.addEventListener('click', () => {
+                navbar.classList.remove('menu-open');
+                mobileToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navbar.classList.contains('menu-open')) {
+                navbar.classList.remove('menu-open');
+                mobileToggle.setAttribute('aria-expanded', 'false');
+                mobileToggle.focus();
+            }
         });
     }
 
-    // 5. Keyboard accessibility for dropdowns
+    // 6. Mobile & Keyboard Accessibility for Dropdowns
     const dropdowns = document.querySelectorAll('.dropdown');
     dropdowns.forEach(dropdown => {
         const toggle = dropdown.querySelector('.dropdown-toggle');
-        const menu = dropdown.querySelector('.dropdown-menu');
+        if (!toggle) return;
 
         toggle.addEventListener('click', (e) => {
-            // For touch devices or keyboard users
-            if (window.innerWidth <= 768 || e.pointerType === '') {
+            if (window.innerWidth <= 768) {
                 e.preventDefault();
-                const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
-                toggle.setAttribute('aria-expanded', !isExpanded);
-                menu.style.opacity = isExpanded ? '0' : '1';
-                menu.style.visibility = isExpanded ? 'hidden' : 'visible';
-                menu.style.transform = isExpanded ? 'translateY(10px)' : 'translateY(0)';
+                e.stopPropagation();
+                const isOpen = dropdown.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', String(isOpen));
             }
         });
     });

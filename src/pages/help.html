@@ -1,17 +1,58 @@
 ---
-title: Help Center - RESS Support
-description: Find answers on accounts, bookings, payments, safety and driver registration.
-showCta: true
+title: Help Center - Coming Soon - RESS Support
+description: Comprehensive Help Center articles and self-service guides are coming soon. Access our 24/7 customer support team and direct contact channels.
+pageClass: page-fullscreen page-help
+showCta: false
 ---
-<section class="page-header" style="padding: 120px 0 60px; background: var(--bg-color); text-align: center;">
-            <div class="container">
-                <h1>Help Center</h1>
-                <p style="font-size: 1.2rem; color: var(--text-secondary);">Find answers on accounts, bookings, payments, safety and driver registration.</p>
+
+<!-- Full Viewport Help Center Coming Soon Canvas -->
+<section class="section-fullscreen hero-layered" style="min-height: 100vh; width: 100%; background: linear-gradient(135deg, #06090D 0%, #0F1622 100%); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; padding: 160px 24px 100px; text-align: center;">
+    <div class="container" style="max-width: 960px; width: 100%; position: relative; z-index: 2; margin: 0 auto;">
+        <h1 style="color: #FFFFFF; font-size: clamp(2.5rem, 5.5vw, 4rem); line-height: 1.15; margin-bottom: 1.25rem; font-weight: 700;">
+            Coming soon
+        </h1>
+        
+        <p style="color: #A8B8C8; font-size: 1.2rem; line-height: 1.65; margin: 0 auto 3rem; max-width: 660px;">
+            Our comprehensive self-service knowledge base is currently being assembled. In the meantime, our 24/7 customer care and emergency operations teams are available right now to assist you.
+        </p>
+
+        <!-- 3 Direct Support Channels Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; text-align: left; max-width: 820px; margin: 0 auto 3rem;">
+            <!-- Channel 1: Support Desk -->
+            <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-md); padding: 1.75rem; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.2s ease;">
+                <div>
+                    <div style="color: #FFFFFF; font-weight: 700; font-size: 1.1rem; margin-bottom: 0.5rem;">Support desk</div>
+                    <p style="color: #A8B8C8; font-size: 0.9rem; line-height: 1.55; margin-bottom: 1.25rem;">Submit a message for trip reviews, receipts, food delivery, or account settings.</p>
+                </div>
+                <a href="contact.html" style="color: var(--brand-teal); font-weight: 600; font-size: 0.95rem;">Send a message</a>
             </div>
-        </section>
-        <section class="container" style="padding: 4rem 0; min-height: 40vh; text-align: center;">
-            <div style="background: var(--surface-color); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 3rem; text-align: left; box-shadow: var(--shadow-sm); max-width: 800px; margin: 0 auto;">
-                <p>Full content structure for <strong>Help Center</strong> has been set up.</p>
-                <p><em>(Refer to sections 6.12 through 6.18 of the specification for detailed internal components of this page)</em></p>
+
+            <!-- Channel 2: Emergency Line -->
+            <div style="background: rgba(206, 51, 117, 0.06); border: 1px solid rgba(206, 51, 117, 0.35); border-radius: var(--radius-md); padding: 1.75rem; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.2s ease;">
+                <div>
+                    <div style="color: #FFFFFF; font-weight: 700; font-size: 1.1rem; margin-bottom: 0.5rem;">24/7 Emergency line</div>
+                    <p style="color: #A8B8C8; font-size: 0.9rem; line-height: 1.55; margin-bottom: 1.25rem;">Immediate phone assistance for active in-trip safety concerns and armed dispatch.</p>
+                </div>
+                <a href="tel:{{config.contact.phoneRaw}}" style="color: #FF8BA7; font-weight: 600; font-size: 0.95rem;">{{config.contact.phone}}</a>
             </div>
-        </section>
+
+            <!-- Channel 3: WhatsApp Support -->
+            <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-md); padding: 1.75rem; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.2s ease;">
+                <div>
+                    <div style="color: #FFFFFF; font-weight: 700; font-size: 1.1rem; margin-bottom: 0.5rem;">WhatsApp live chat</div>
+                    <p style="color: #A8B8C8; font-size: 0.9rem; line-height: 1.55; margin-bottom: 1.25rem;">Direct live conversation with our verified customer care officers on WhatsApp.</p>
+                </div>
+                <a href="https://wa.me/2347077160028" target="_blank" rel="noopener noreferrer" style="color: var(--brand-teal); font-weight: 600; font-size: 0.95rem;">Open WhatsApp chat</a>
+            </div>
+        </div>
+
+        <!-- Quick Action CTAs -->
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="contact.html" class="btn btn-primary" style="padding: 0.9rem 2rem;">Contact support team</a>
+            <a href="index.html" class="btn btn-outline" style="border-color: rgba(255,255,255,0.25); color: #FFFFFF; padding: 0.9rem 2rem;">Return to home page</a>
+        </div>
+    </div>
+
+    <!-- Background Teal Ambient Glow -->
+    <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 620px; height: 620px; background: var(--brand-teal); opacity: 0.08; filter: blur(140px); border-radius: 50%; pointer-events: none;"></div>
+</section>

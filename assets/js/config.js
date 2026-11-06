@@ -92,7 +92,7 @@ const SITE_CONFIG = {
 
     // Key Page Navigation Links
     links: {
-        howItWorks: "how-it-works.html",
+        about: "about.html",
         rideOptions: "ride-options.html",
         pricing: "pricing.html",
         safety: "safety.html",

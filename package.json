@@ -7,7 +7,7 @@
     "build": "node scripts/build.js",
     "watch": "node scripts/build.js --watch",
     "assets:download": "node scripts/download_assets.js",
-    "dev": "node scripts/build.js && npx -y serve dist -l 3000",
+    "dev": "node scripts/build.js --watch & npx -y serve dist -l 3000",
     "start": "npx -y serve dist -l 3000"
   },
   "keywords": [
