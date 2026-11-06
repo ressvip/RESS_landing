@@ -6,6 +6,7 @@ showCta: true
 scripts: |
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            /* Estimator scripts commented out while estimator section is disabled
             // Tab switching for estimator
             const tabBtns = document.querySelectorAll('.pricing-tab-btn');
             const tabPanels = document.querySelectorAll('.pricing-tab-panel');
@@ -156,6 +157,7 @@ scripts: |
                 servScope.addEventListener('change', updateServEstimate);
                 updateServEstimate();
             }
+            */
 
             // FAQ Accordion
             document.querySelectorAll('.faq-question').forEach(q => {
@@ -178,7 +180,6 @@ scripts: |
 <!-- 1. Hero Section (Full-Width Layered Command Canvas) -->
 <section class="section-fullscreen hero-layered" style="background: linear-gradient(135deg, #06090D 0%, #0F1622 100%); position: relative; overflow: hidden;">
     <div class="container text-center" style="position: relative; z-index: 2; max-width: 860px;">
-        <span class="vertical-card-badge badge-ride" style="background: rgba(39, 157, 159, 0.18); color: #4ED9DB;">Clear and Honest Pricing</span>
         <h1 style="color: #FFFFFF; font-size: 3.5rem; line-height: 1.15; margin-bottom: 1.5rem; font-weight: 700;">
             Transparent pricing across every trip, meal, and service.
         </h1>
@@ -186,15 +187,15 @@ scripts: |
             Know exactly what you pay before you confirm. We eliminated hidden fees, surge price-gouging during heavy rain, and unverified charges across all four RESS modules in Nigeria.
         </p>
         <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-            <a href="#estimator" class="btn btn-primary">Calculate estimated costs</a>
-            <a href="#module-breakdown" class="btn btn-outline" style="border-color: rgba(255,255,255,0.25); color: #FFFFFF;">Explore pricing by module</a>
+            <a href="#commitments" class="btn btn-primary">Our pricing commitments</a>
+            <a href="#faq" class="btn btn-outline" style="border-color: rgba(255,255,255,0.25); color: #FFFFFF;">Frequently asked questions</a>
         </div>
     </div>
     <div style="position: absolute; left: 50%; top: 45%; transform: translate(-50%, -50%); width: 640px; height: 640px; background: var(--brand-teal); opacity: 0.08; filter: blur(140px); border-radius: 50%; pointer-events: none;"></div>
 </section>
 
 <!-- 2. Pricing Commitments & The Anti-Gouging Standard (Full-Width Surface Section) -->
-<section class="section-fullscreen section-surface">
+<section id="commitments" class="section-fullscreen section-surface">
     <div class="container">
         <div class="text-center" style="max-width: 780px; margin: 0 auto 3.5rem;">
             <h2>Our pricing commitments to Nigerian riders and households</h2>
@@ -239,245 +240,8 @@ scripts: |
     </div>
 </section>
 
-<!-- 3. Interactive Multi-Module Cost Estimator (Full-Width Light Section) -->
-<section id="estimator" class="section-fullscreen section-light">
-    <div class="container">
-        <div class="text-center" style="max-width: 780px; margin: 0 auto 3rem;">
-            <h2>Estimate your cost in advance</h2>
-            <p style="color: var(--text-secondary); margin-top: 0.75rem; font-size: 1.1rem; line-height: 1.6;">
-                Select any module below to calculate realistic upfront costs for Nigerian urban hubs.
-            </p>
-        </div>
 
-        <div class="pricing-tabs-nav">
-            <button type="button" class="pricing-tab-btn active" data-tab="tab-ride">RESS Ride</button>
-            <button type="button" class="pricing-tab-btn" data-tab="tab-eat">RESS Eat</button>
-            <button type="button" class="pricing-tab-btn" data-tab="tab-security">RESS Security</button>
-            <button type="button" class="pricing-tab-btn" data-tab="tab-services">RESS Services</button>
-        </div>
-
-        <div class="pricing-estimator-container">
-            <!-- TAB 1: RIDE ESTIMATOR -->
-            <div id="tab-ride" class="pricing-tab-panel active">
-                <div class="estimator-grid">
-                    <div class="estimator-inputs">
-                        <div class="estimator-field">
-                            <label for="ride-corridor">Select urban corridor or route</label>
-                            <select id="ride-corridor">
-                                <option value="ikeja-vi">Lagos: Ikeja to Victoria Island (24 km)</option>
-                                <option value="lekki-airport">Lagos: Lekki Phase 1 to Lagos Airport (32 km)</option>
-                                <option value="yaba-marina">Lagos: Yaba to Marina (11 km)</option>
-                                <option value="maitama-abj-airport">Abuja: Maitama to Nnamdi Azikiwe Airport (42 km)</option>
-                                <option value="garki-wuse">Abuja: Garki to Wuse II (8 km)</option>
-                                <option value="gra-ph-airport">Port Harcourt: GRA Phase 2 to PH Airport (28 km)</option>
-                            </select>
-                        </div>
-
-                        <div class="estimator-field">
-                            <label for="ride-tier">Select vehicle travel category</label>
-                            <select id="ride-tier">
-                                <option value="go">RESS Go (Everyday compact sedan)</option>
-                                <option value="comfort" selected>RESS Comfort (Air-conditioned executive sedan)</option>
-                                <option value="xl">RESS XL (6-seater SUV or minivan)</option>
-                                <option value="lux">RESS Lux (Premium executive travel)</option>
-                            </select>
-                        </div>
-
-                        <div class="receipt-notice">
-                            <strong>Upfront Fare Policy:</strong> Your confirmed fare is locked in the app before booking. Highway tolls and estate visitor access fees are billed at actual cost without commission.
-                        </div>
-                    </div>
-
-                    <div class="estimator-receipt-card">
-                        <div class="receipt-header">
-                            <span>Estimated upfront fare</span>
-                            <strong id="ride-total-display">₦6,900</strong>
-                        </div>
-                        <div class="receipt-rows">
-                            <div class="receipt-row">
-                                <span>Base starting fare</span>
-                                <strong id="ride-base-display">₦1,200</strong>
-                            </div>
-                            <div class="receipt-row">
-                                <span>Distance component</span>
-                                <strong id="ride-dist-display">24 km (₦4,560)</strong>
-                            </div>
-                            <div class="receipt-row">
-                                <span>Travel time component</span>
-                                <strong id="ride-time-display">45 min (₦1,575)</strong>
-                            </div>
-                            <div class="receipt-row">
-                                <span>Driver emergency protection</span>
-                                <strong style="color: var(--brand-teal);">Included</strong>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- TAB 2: EAT ESTIMATOR -->
-            <div id="tab-eat" class="pricing-tab-panel">
-                <div class="estimator-grid">
-                    <div class="estimator-inputs">
-                        <div class="estimator-field">
-                            <label for="eat-subtotal">Food order basket subtotal (₦)</label>
-                            <input type="number" id="eat-subtotal" value="5000" min="1000" step="500">
-                        </div>
-
-                        <div class="estimator-field">
-                            <label for="eat-distance">Delivery distance from restaurant</label>
-                            <select id="eat-distance">
-                                <option value="700" selected>Within neighborhood (Under 3 km) : ₦700</option>
-                                <option value="1100">Across district (3 km to 7 km) : ₦1,100</option>
-                                <option value="1700">Longer city transit (7 km to 12 km) : ₦1,700</option>
-                            </select>
-                        </div>
-
-                        <div class="estimator-field">
-                            <label for="eat-tip">Optional courier appreciation tip</label>
-                            <select id="eat-tip">
-                                <option value="0">No tip</option>
-                                <option value="500" selected>₦500 tip (100% to rider)</option>
-                                <option value="1000">₦1,000 tip (100% to rider)</option>
-                            </select>
-                        </div>
-
-                        <div class="receipt-notice">
-                            <strong>Menu Parity Guarantee:</strong> Restaurants on RESS Eat charge the exact same prices as their physical dine-in menus. No hidden food markups.
-                        </div>
-                    </div>
-
-                    <div class="estimator-receipt-card">
-                        <div class="receipt-header">
-                            <span>Estimated order total</span>
-                            <strong id="eat-total-display">₦6,550</strong>
-                        </div>
-                        <div class="receipt-rows">
-                            <div class="receipt-row">
-                                <span>Food items subtotal</span>
-                                <strong id="eat-food-display">₦5,000</strong>
-                            </div>
-                            <div class="receipt-row">
-                                <span>Delivery transit fee</span>
-                                <strong id="eat-delivery-display">₦700</strong>
-                            </div>
-                            <div class="receipt-row">
-                                <span>Merchant packaging fee</span>
-                                <strong>₦350</strong>
-                            </div>
-                            <div class="receipt-row">
-                                <span>Courier tip</span>
-                                <strong id="eat-tip-display">₦500</strong>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- TAB 3: SECURITY ESTIMATOR -->
-            <div id="tab-security" class="pricing-tab-panel">
-                <div class="estimator-grid">
-                    <div class="estimator-inputs">
-                        <div class="estimator-field">
-                            <label for="sec-plan">Select protection tier or emergency protocol</label>
-                            <select id="sec-plan">
-                                <option value="dispatch" selected>On-demand physical armed response dispatch</option>
-                                <option value="family">RESS Shield Family Circle (Monthly subscription)</option>
-                                <option value="estate">Estate perimeter and community escort unit</option>
-                            </select>
-                        </div>
-
-                        <div class="receipt-notice">
-                            <strong>Passenger Safety Note:</strong> Active passengers on RESS Ride enjoy integrated armed patrol dispatch and SOS hardware volume-key triggers at zero additional cost.
-                        </div>
-                    </div>
-
-                    <div class="estimator-receipt-card">
-                        <div class="receipt-header">
-                            <span>Security coverage cost</span>
-                            <strong id="sec-total-display">₦15,000</strong>
-                        </div>
-                        <div class="receipt-rows">
-                            <div class="receipt-row">
-                                <span>Billing frequency</span>
-                                <strong id="sec-type-display">Per Emergency Incident</strong>
-                            </div>
-                            <div class="receipt-row">
-                                <span>Response protocol</span>
-                                <strong id="sec-units-display">Dedicated Armed Patrol Unit</strong>
-                            </div>
-                            <div class="receipt-row">
-                                <span>Command room monitoring</span>
-                                <strong style="color: var(--brand-teal);">24/7 Active GPS Tracking</strong>
-                            </div>
-                            <div class="receipt-row">
-                                <span>Response time benchmark</span>
-                                <strong>Under 8 minutes in urban zones</strong>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- TAB 4: SERVICES ESTIMATOR -->
-            <div id="tab-services" class="pricing-tab-panel">
-                <div class="estimator-grid">
-                    <div class="estimator-inputs">
-                        <div class="estimator-field">
-                            <label for="serv-trade">Select certified trade specialty</label>
-                            <select id="serv-trade">
-                                <option value="electrical">Certified Electrician</option>
-                                <option value="plumbing">Licensed Plumber</option>
-                                <option value="hvac">Air Conditioning Technician</option>
-                                <option value="carpentry">Carpenter and Security Locksmith</option>
-                            </select>
-                        </div>
-
-                        <div class="estimator-field">
-                            <label for="serv-scope">Select service engagement scope</label>
-                            <select id="serv-scope">
-                                <option value="diagnostic" selected>Diagnostic inspection and written quote (Flat fee)</option>
-                                <option value="standard">Standard repair (Diagnostic + up to 2 hours labor)</option>
-                                <option value="major">Major installation labor deposit (Capped labor)</option>
-                            </select>
-                        </div>
-
-                        <div class="receipt-notice">
-                            <strong>Escrow Assurance:</strong> Payment is never released directly to the artisan. Funds stay locked until you confirm completion and testing in the app.
-                        </div>
-                    </div>
-
-                    <div class="estimator-receipt-card">
-                        <div class="receipt-header">
-                            <span>Labor and inspection fee</span>
-                            <strong id="serv-total-display">₦4,500</strong>
-                        </div>
-                        <div class="receipt-rows">
-                            <div class="receipt-row">
-                                <span>Scope of service</span>
-                                <strong id="serv-scope-display">Inspection and Written Quote</strong>
-                            </div>
-                            <div class="receipt-row">
-                                <span>Payment protection</span>
-                                <strong id="serv-escrow-display">Locked until initial inspection ends</strong>
-                            </div>
-                            <div class="receipt-row">
-                                <span>Artisan background check</span>
-                                <strong style="color: var(--brand-teal);">100% NIN Verified</strong>
-                            </div>
-                            <div class="receipt-row">
-                                <span>Workmanship warranty</span>
-                                <strong>7-Day Coverage Included</strong>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 4. Complete Ecosystem Pricing Structure (Full-Width Surface Section) -->
+<!-- SECTION COMMENTED OUT FOR LATER: The four verticals detailed pricing structure
 <section id="module-breakdown" class="section-fullscreen section-surface">
     <div class="container">
         <div class="text-center" style="max-width: 780px; margin: 0 auto 3.5rem;">
@@ -488,7 +252,7 @@ scripts: |
         </div>
 
         <div class="vertical-pricing-grid">
-            <!-- Card 1: Ride -->
+            [Card 1: Ride]
             <div class="vertical-price-card">
                 <span class="vertical-card-badge badge-ride">RESS Ride</span>
                 <h3 style="font-size: 1.5rem; color: var(--text-primary); margin-bottom: 0.5rem;">Urban Transit & Airport Travel</h3>
@@ -538,7 +302,7 @@ scripts: |
                 </div>
             </div>
 
-            <!-- Card 2: Eat -->
+            [Card 2: Eat]
             <div class="vertical-price-card">
                 <span class="vertical-card-badge badge-eat">RESS Eat</span>
                 <h3 style="font-size: 1.5rem; color: var(--text-primary); margin-bottom: 0.5rem;">Neighborhood Kitchens & Merchants</h3>
@@ -583,7 +347,7 @@ scripts: |
                 </div>
             </div>
 
-            <!-- Card 3: Security -->
+            [Card 3: Security]
             <div class="vertical-price-card">
                 <span class="vertical-card-badge badge-security">RESS Security</span>
                 <h3 style="font-size: 1.5rem; color: var(--text-primary); margin-bottom: 0.5rem;">Rapid Armed Emergency Response</h3>
@@ -628,7 +392,7 @@ scripts: |
                 </div>
             </div>
 
-            <!-- Card 4: Services -->
+            [Card 4: Services]
             <div class="vertical-price-card">
                 <span class="vertical-card-badge badge-services">RESS Services</span>
                 <h3 style="font-size: 1.5rem; color: var(--text-primary); margin-bottom: 0.5rem;">Certified Trade Professionals</h3>
@@ -675,130 +439,11 @@ scripts: |
         </div>
     </div>
 </section>
+-->
 
-<!-- 5. Where Your Money Goes: Complete Transparency (Full-Width Light Section) -->
-<section class="section-fullscreen section-light">
-    <div class="container">
-        <div class="anatomy-container">
-            <div class="text-center" style="max-width: 760px; margin: 0 auto;">
-                <h2>Where your money goes: complete transparency</h2>
-                <p style="color: var(--text-secondary); margin-top: 0.75rem; font-size: 1.1rem; line-height: 1.6;">
-                    Unlike foreign platforms that siphon platform fees overseas, RESS reinvests revenue into local Nigerian operations, physical patrol logistics, and fair partner compensation.
-                </p>
-            </div>
 
-            <div class="anatomy-bar-visual">
-                <div class="anatomy-segment-partners" title="85%+ to Local Partners"></div>
-                <div class="anatomy-segment-safety" title="10% to Safety & Infrastructure"></div>
-                <div class="anatomy-segment-ops" title="5% to Platform & Support"></div>
-            </div>
-
-            <div class="anatomy-legend-grid">
-                <div class="anatomy-legend-item">
-                    <div class="legend-header">
-                        <div class="legend-color-dot dot-partners"></div>
-                        <strong style="color: var(--text-primary); font-size: 1.1rem;">85%+ to Local Partners</strong>
-                    </div>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0;">
-                        Direct earnings transferred weekly to verified drivers, local food vendors, and certified artisans across Nigeria.
-                    </p>
-                </div>
-
-                <div class="anatomy-legend-item">
-                    <div class="legend-header">
-                        <div class="legend-color-dot dot-safety"></div>
-                        <strong style="color: var(--text-primary); font-size: 1.1rem;">10% to Safety Operations</strong>
-                    </div>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0;">
-                        Funding 24/7 emergency dispatch centers, NIN database verifications, and physical vehicle roadworthiness inspections.
-                    </p>
-                </div>
-
-                <div class="anatomy-legend-item">
-                    <div class="legend-header">
-                        <div class="legend-color-dot dot-ops"></div>
-                        <strong style="color: var(--text-primary); font-size: 1.1rem;">5% to Platform & Cloud</strong>
-                    </div>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0;">
-                        Payment gateway settlement charges, escrow fund insurance reserves, and local Nigerian customer care teams.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 6. Corporate Accounts & Fleet Billing (Full-Width Dark Section) -->
-<section class="section-fullscreen" style="background: #0B131E; color: #FFFFFF; border-top: 1px solid rgba(255, 255, 255, 0.08); border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
-    <div class="container">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3.5rem; align-items: center;">
-            <div>
-                <span class="vertical-card-badge" style="background: rgba(39, 157, 159, 0.2); color: #4ED9DB;">Corporate Solutions</span>
-                <h2 style="color: #FFFFFF; font-size: 2.5rem; line-height: 1.2; margin-bottom: 1.25rem;">
-                    Centralized billing for Nigerian businesses and estates
-                </h2>
-                <p style="color: #A8B8C8; font-size: 1.1rem; line-height: 1.65; margin-bottom: 2rem;">
-                    Manage employee commutes, corporate catering deliveries, and facility maintenance under one verified corporate dashboard with consolidated monthly invoicing.
-                </p>
-
-                <div style="display: grid; gap: 1.25rem;">
-                    <div style="display: flex; gap: 1rem; align-items: flex-start;">
-                        <span style="color: var(--brand-teal); font-weight: 700; font-size: 1.1rem;">✓</span>
-                        <div>
-                            <strong style="color: #FFFFFF; display: block;">Tax-Compliant Invoicing</strong>
-                            <span style="color: #94A3B8; font-size: 0.95rem;">FIRS and CAC-compliant electronic statements with itemized VAT receipts for corporate tax audits.</span>
-                        </div>
-                    </div>
-
-                    <div style="display: flex; gap: 1rem; align-items: flex-start;">
-                        <span style="color: var(--brand-teal); font-weight: 700; font-size: 1.1rem;">✓</span>
-                        <div>
-                            <strong style="color: #FFFFFF; display: block;">Departmental Spending Limits</strong>
-                            <span style="color: #94A3B8; font-size: 0.95rem;">Set monthly transportation and meal allowances by department or employee seniority tier.</span>
-                        </div>
-                    </div>
-
-                    <div style="display: flex; gap: 1rem; align-items: flex-start;">
-                        <span style="color: var(--brand-teal); font-weight: 700; font-size: 1.1rem;">✓</span>
-                        <div>
-                            <strong style="color: #FFFFFF; display: block;">Priority Facility Maintenance</strong>
-                            <span style="color: #94A3B8; font-size: 0.95rem;">Access accredited industrial electricians and plumbers with 2-hour dispatch SLAs for corporate offices.</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="margin-top: 2.5rem;">
-                    <a href="contact.html" class="btn btn-primary" style="padding: 0.9rem 2rem;">Contact corporate sales</a>
-                </div>
-            </div>
-
-            <div style="background: rgba(18, 25, 36, 0.8); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-lg); padding: 2.5rem; box-shadow: 0 20px 40px rgba(0,0,0,0.4);">
-                <h3 style="font-size: 1.4rem; color: #FFFFFF; margin-bottom: 1.5rem;">Corporate Account Overview</h3>
-                <div style="display: grid; gap: 1.25rem;">
-                    <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 0.75rem;">
-                        <span style="color: #94A3B8;">Billing frequency</span>
-                        <strong style="color: #FFFFFF;">Monthly Consolidated Statement</strong>
-                    </div>
-                    <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 0.75rem;">
-                        <span style="color: #94A3B8;">Payment terms</span>
-                        <strong style="color: #FFFFFF;">Net 15 or Corporate Card</strong>
-                    </div>
-                    <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 0.75rem;">
-                        <span style="color: #94A3B8;">Dedicated account manager</span>
-                        <strong style="color: var(--brand-teal);">Stationed in Nigeria</strong>
-                    </div>
-                    <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 0.75rem;">
-                        <span style="color: #94A3B8;">Emergency patrol priority</span>
-                        <strong style="color: var(--brand-teal);">Tier 1 Routing Protocol</strong>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 7. Clear, Comprehensive FAQ Accordion (Full-Width Surface Section) -->
-<section class="section-fullscreen section-surface faq-section">
+<!-- 3. Clear, Comprehensive FAQ Accordion (Full-Width Surface Section) -->
+<section id="faq" class="section-fullscreen section-surface faq-section">
     <div class="container">
         <div class="text-center" style="max-width: 780px; margin: 0 auto 3rem;">
             <h2>Frequently asked questions about pricing</h2>
