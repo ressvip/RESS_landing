@@ -192,18 +192,55 @@ function build() {
             html = html.replace(ifCtaRegex, '');
         }
 
+        const filename = path.basename(pageFilePath);
+        const baseUrl = (process.env.SITE_URL || getConfigValue(SITE_CONFIG, 'brand.websiteUrl') || 'https://www.ressvip.com').replace(/\/$/, '');
+        const pagePath = filename === 'index.html' ? '' : filename;
+        const pageUrl = pageMeta.canonicalUrl || (pagePath ? `${baseUrl}/${pagePath}` : `${baseUrl}/`);
+        const canonicalUrl = pageUrl;
+        const defaultOgImage = getConfigValue(SITE_CONFIG, 'seo.defaultImage') || 'assets/images/03.png';
+        const ogImage = pageMeta.ogImage || (defaultOgImage.startsWith('http') ? defaultOgImage : `${baseUrl}/${defaultOgImage}`);
+
         // Replace placeholders
         html = html.replace(/\{\{title\}\}/g, pageMeta.title || '')
                    .replace(/\{\{description\}\}/g, pageMeta.description || '')
                    .replace(/\{\{content\}\}/g, pageBody)
                    .replace(/\{\{scripts\}\}/g, pageMeta.scripts || '')
-                   .replace(/\{\{headExtra\}\}/g, pageMeta.headExtra || '');
+                   .replace(/\{\{headExtra\}\}/g, pageMeta.headExtra || '')
+                   .replace(/\{\{pageUrl\}\}/g, pageUrl)
+                   .replace(/\{\{canonicalUrl\}\}/g, canonicalUrl)
+                   .replace(/\{\{ogImage\}\}/g, ogImage);
+
+        // Final config interpolation pass for any remaining tokens
+        html = interpolateConfig(html);
 
         // Output destination (dist/ directory)
-        const filename = path.basename(pageFilePath);
         const outputPath = path.join(DIST_DIR, filename);
 
         fs.writeFileSync(outputPath, html, 'utf8');
+
+        // Also output pages to ROOT_DIR so opening directly in browser/IDE works
+        fs.writeFileSync(path.join(ROOT_DIR, filename), html, 'utf8');
+
+        // Also alias refund-policy.html to legal-refund.html for convenience
+        if (filename === 'legal-refund.html') {
+            fs.writeFileSync(path.join(DIST_DIR, 'refund-policy.html'), html, 'utf8');
+            fs.writeFileSync(path.join(ROOT_DIR, 'refund-policy.html'), html, 'utf8');
+        }
+
+        // Also alias privacy-policy.html to legal-privacy.html
+        if (filename === 'legal-privacy.html') {
+            fs.writeFileSync(path.join(DIST_DIR, 'privacy-policy.html'), html, 'utf8');
+            fs.writeFileSync(path.join(ROOT_DIR, 'privacy-policy.html'), html, 'utf8');
+        }
+
+        // Also alias terms-of-service.html and terms.html to legal-terms.html
+        if (filename === 'legal-terms.html') {
+            fs.writeFileSync(path.join(DIST_DIR, 'terms-of-service.html'), html, 'utf8');
+            fs.writeFileSync(path.join(ROOT_DIR, 'terms-of-service.html'), html, 'utf8');
+            fs.writeFileSync(path.join(DIST_DIR, 'terms.html'), html, 'utf8');
+            fs.writeFileSync(path.join(ROOT_DIR, 'terms.html'), html, 'utf8');
+        }
+
         builtCount++;
         console.log(`  ✓ Built dist/${filename}`);
     }
