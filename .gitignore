@@ -25,7 +25,6 @@ yarn-error.log*
 *.sublime-workspace
 
 # Temporary and build artifacts
-dist/
 tmp/
 scratch/
 .system_generated/
